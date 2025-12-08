@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container-login">
+						<!-- Logo -->
+						 
+						<div class="display-grid">
+							<div class="video-area">
+								<div class="video-area">
+									<video autoplay loop playsinline controls id="video-principal-layout">
+										<source src="videos/WhatsApp-Video-2025-12-07-at-13.54.01.mp4" type="video/mp4">
+									</video>
+								</div>
+							
+								<div class="overlay"></div> 
+							</div>
+						<div class="login-container display-flex">    
+								<h1><a href="#" class="logo-d-choco"><img src="images/logo-d-choco.png" alt="" /></a></h1>
+							<p>quem prova, nunca esquece.</p>
+								<div class="col-6 col-12-small display-flex">
+									<p>Login</p>
+									<input name="email" placeholder="Seu email aqui" type="text" />
+									<p>senha</p>
+									<input name="password" placeholder="Sua senha aqui" type="password" />
+								</div>
+								<br>
+								<div class="row gtr-50">
+									<div class="col-12 display-flex">
+										<a href="#" class="form-button-submit button icon solid">Login</a>
+									
+									
+									
+									<p>Não tem uma conta? <a href="cadastro.html" class="link-texto">Cadastrar-se</a></p>
+									<a href="esqueci-senha.html" class="link-texto">Esqueci minha senha</a>
+								</div>
+								</div>
+
+							</div>
+							</div>
+
+
+
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a class="icon solid" href="index.html"><span>Inicio</span></a></li>
+									<li><a class="icon solid" href="catalogo.html" ><span>Catalogo</span></a></li>
+									<li><a class="icon solid" href="sobre-nos.html"><span>Sobre nós</span></a></li>
+									<li><a class="icon solid" href="login.html"><span>Login</span></a></li>
+									<li><a class="icon solid" href="carrinho.html"><span>Carrinho</span></a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</section>
+
+			
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<header>
+							<h2>Questions or comments? <strong>Get in touch:</strong></h2>
+						</header>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<section>
+									<form method="post" action="#">
+										<div class="row gtr-50">
+											<div class="col-6 col-12-small">
+												<input name="name" placeholder="Name" type="text" />
+											</div>
+											<div class="col-6 col-12-small">
+												<input name="email" placeholder="Email" type="text" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message"></textarea>
+											</div>
+											<div class="col-12">
+												<a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
+											</div>
+										</div>
+									</form>
+								</section>
+							</div>
+							<div class="col-6 col-12-medium">
+								<section>
+									<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet
+									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur
+									leo nibh, rutrum eu malesuada.</p>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul class="icons">
+												<li class="icon solid fa-home">
+													1234 Somewhere Road<br />
+													Nashville, TN 00000<br />
+													USA
+												</li>
+												<li class="icon solid fa-phone">
+													(000) 000-0000
+												</li>
+												<li class="icon solid fa-envelope">
+													<a href="#">info@untitled.tld</a>
+												</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<ul class="icons">
+												<li class="icon brands fa-twitter">
+													<a href="#">@untitled</a>
+												</li>
+												<li class="icon brands fa-instagram">
+													<a href="#">instagram.com/untitled</a>
+												</li>
+												<li class="icon brands fa-dribbble">
+													<a href="#">dribbble.com/untitled</a>
+												</li>
+												<li class="icon brands fa-facebook-f">
+													<a href="#">facebook.com/untitled</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div id="copyright" class="container">
+						<ul class="links">
+							<li>&copy; 2025 D'Choco. Todos os Direitos Reservados.</li> 
+							
+							<li>Design Original do Template: <a href="http://html5up.net" target="_blank">HTML5 UP</a> (Licença CC BY 3.0)</li>
+						</ul>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<script>
+				// Pausa o vídeo em telas pequenas
+				function controlarVideo() {
+					var video = document.querySelector('.video-area video');
+					if (video) {
+						if (window.innerWidth <= 736) {
+							video.pause();
+							video.muted = true;
+						} else {
+							video.muted = false;
+							video.play();
+						}
+					}
+				}
+				
+				// Executa ao carregar e ao redimensionar
+				window.addEventListener('DOMContentLoaded', controlarVideo);
+				window.addEventListener('resize', controlarVideo);
+			</script>
+
+	</body>
+</html>
