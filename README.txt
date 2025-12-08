@@ -1,45 +1,43 @@
-🍫 D'Choco — E-commerce Oficial
+<div align="center">
 
-Repositório oficial da loja virtual D'Choco, desenvolvido para promover a marca e oferecer uma experiência moderna de compra de doces artesanais.
+# 🍫 **D'Choco — E-commerce Oficial**
+Loja virtual criada para apresentar e fortalecer a marca **D'Choco**, oferecendo uma experiência moderna e elegante na venda de doces artesanais.
 
-Tecnologias utilizadas: Spring Boot · HTML · CSS · JavaScript · MySQL
+**HTML · CSS · JavaScript**
 
+---
 
-🎨 Design e Licenciamento (Importante)
+</div>
 
-🛡️ 1. Código e Conteúdo (Copyright Exclusivo)
+## 🎨 **Design e Licenciamento**
 
-Todo o material desenvolvido exclusivamente para este projeto pertence à D'Choco:
+### 🛡️ **1. Direitos Autorais (Copyright)**
 
-Código backend
+Todo o conteúdo exclusivo desenvolvido para este projeto pertence à **D'Choco**, incluindo:
 
-Regras de negócio
+- Código backend  
+- Lógica e regras de negócio  
+- Customizações do frontend  
+- Imagens de produtos  
+- Textos e conteúdos gráficos  
 
-Customizações de frontend
+🔒 **© 2025 D'Choco E-commerce — Todos os Direitos Reservados.**
 
-Imagens de produtos
+---
 
-Conteúdos textuais ou gráficos
+### 📝 **2. Template Base — HTML5 UP (Licença CC BY 3.0)**
 
-🔒 © 2025 D'Choco E-commerce — Todos os Direitos Reservados.
+O design inicial do site utiliza o template **Strongly Typed** da **HTML5 UP**.
 
+- **Licença:** *Creative Commons Attribution 3.0 Unported (CC BY 3.0)*  
+- Permite uso pessoal e comercial **com créditos obrigatórios**  
+- Texto completo da licença disponível em **LICENSE.txt**
 
+---
 
-📝 2. Template Base — HTML5 UP (CC BY 3.0)
+## 🧩 **Créditos Obrigatórios (Exigência da Licença)**
 
-O layout visual deste site utiliza o template Strongly Typed da HTML5 UP.
-
-Licença: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
-
-Uso permitido para fins pessoais e comerciais, desde que os créditos sejam mantidos
-
-Licença completa disponível em: LICENSE.txt (raiz do repositório)
-
-
-
-🧩 Créditos Obrigatórios (Requisitos da Licença)
-
-Este projeto preserva todos os créditos originais do template, conforme exigido pela licença CC BY 3.0:
+Este projeto mantém todos os créditos originais do template, conforme requerido:
 
 | Recurso                | Autor / Origem                                       |
 | ---------------------- | ---------------------------------------------------- |
@@ -47,3 +45,12 @@ Este projeto preserva todos os créditos originais do template, conforme exigido
 | **Ícones**             | Font Awesome (fontawesome.io)                        |
 | **Ferramentas JS**     | jQuery (jquery.com)                                  |
 | **Sistema Responsivo** | Responsive Tools (github.com/ajlkn/responsive-tools) |
+
+---
+
+<div align="center">
+
+✨ *Obrigado por visitar o repositório da D'Choco!*  
+Se desejar, posso criar uma versão com **badges**, **screenshots**, **instalação**, ou **estrutura do projeto**.
+
+</div>
