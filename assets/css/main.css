@@ -2856,7 +2856,11 @@ input, select, textarea {
 
 .display-grid {
     display: grid;
-    grid-template-columns: 0%  70% 50% 20%; 
+    grid-template-columns: 70%  30% 50% 20%; 
+    
+    
+    
+    /* Centraliza o formulário verticalmente (opcional, mas fica bonito) */
     align-items: center; 
 }
 
@@ -2869,13 +2873,18 @@ input, select, textarea {
 
 }
 
-
+.display-grid .video-area video{
+    width: 100%;
+    padding-right: 70px; /* Um respiro interno */
+    
+}
 
 
 /* O formulário vai automaticamente para a segunda coluna se houver algo antes,
    mas para garantir que ele fique na direita mesmo sendo o único item: */
 .login-container {
     grid-column: 2 / 5; /* Força ele a ficar na coluna 2 (direita) */
+    
     padding: 40px; /* Um respiro interno */
     
 }
@@ -2885,13 +2894,6 @@ input, select, textarea {
 	padding-top: 0px;
 	margin-top: 0px;
 	border-top: 0px;
-}
-
-
-.display-grid .video-area video {
-    width: 100%; 
-    padding-right: 70px; 
-    box-sizing: border-box; 
 }
 
 /* ====== RESPONSIVIDADE PARA TELAS DE CELULAR ====== */

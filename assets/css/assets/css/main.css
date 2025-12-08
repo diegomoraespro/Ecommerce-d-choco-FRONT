@@ -29,6 +29,8 @@ section, summary, time, mark, audio, video {
 	
 }
 
+
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -2856,38 +2858,42 @@ input, select, textarea {
 
 .display-grid {
     display: grid;
-    /* Divide a tela em 2 colunas:
-       1fr (espaço vazio/flexível) | 400px (tamanho fixo do form) */
-    grid-template-columns: 70%  30% 50% 20%; 
-    
-    
-    
-    /* Centraliza o formulário verticalmente (opcional, mas fica bonito) */
+    grid-template-columns: 60% 30% 60%; 
     align-items: center; 
 }
 
 .display-grid .logo-d-choco-pave img{
-	grid-column: 1 / 2; /* Logo na primeira coluna (esquerda) */
+	
 	text-align: left; /* Centraliza a logo dentro da coluna */
 	width: 86%;
-	padding-left: 0px;
+	padding-top: 10px;
 	margin-left: 0px;
 
 }
 
+
+
+
 /* O formulário vai automaticamente para a segunda coluna se houver algo antes,
    mas para garantir que ele fique na direita mesmo sendo o único item: */
 .login-container {
-    grid-column: 2 / 5; /* Força ele a ficar na coluna 2 (direita) */
-    
+    grid-column: 2 / 4; /* Força ele a ficar na coluna 2 (direita) */
     padding: 40px; /* Um respiro interno */
     
 }
+
 
 .display-grid .display-flex{ 
 	padding-top: 0px;
 	margin-top: 0px;
 	border-top: 0px;
+}
+
+
+.display-grid .video-area video {
+    width: 100%; 
+    padding-right: 70px; 
+    box-sizing: border-box; 
 }
 
 /* ====== RESPONSIVIDADE PARA TELAS DE CELULAR ====== */
