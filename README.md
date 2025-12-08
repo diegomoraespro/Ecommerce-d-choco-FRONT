@@ -51,6 +51,6 @@ Este projeto mantém todos os créditos originais do template, conforme requerid
 <div align="center">
 
 ✨ *Obrigado por visitar o repositório da D'Choco!*  
-Se desejar, posso criar uma versão com **badges**, **screenshots**, **instalação**, ou **estrutura do projeto**.
 
 </div>
+
