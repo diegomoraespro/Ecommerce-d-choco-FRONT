@@ -2599,6 +2599,28 @@ input, select, textarea {
 			.image.right {
 				max-width: 35%;
 			}
+			
+		/* Grid - Mantém layout responsivo */
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: stretch;
+			}
+			
+			.col-4,
+			.col-6-medium,
+			.col-12-small {
+				width: 100% !important;
+				margin-bottom: 2em;
+			}
+			
+			/* Para telas um pouco maiores, 2 colunas */
+			@media screen and (min-width: 480px) {
+				.col-4,
+				.col-6-medium {
+					width: 50% !important;
+				}
+			}
 
 		/* Button */
 
