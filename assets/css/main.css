@@ -3000,17 +3000,32 @@ input, select, textarea {
 }
 
 
+/* Container da section dos produtos */
+.texto-centralizado section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.texto-centralizado section header {
+    flex-grow: 0;
+}
+
+.texto-centralizado section .image.featured {
+    flex-grow: 0;
+}
+
+/* Faz o container de botões crescer e se alinhar ao final */
 .espaco-botao {
-    display: flex; /* Habilita o Flexbox */
-    gap: 10px;    /* Adiciona um pequeno espaço entre os botões */
-    /* Garante que os botões ocupem o espaço disponível de forma igual */
-    /* ou use flex-direction: row; (é o padrão) */
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Empurra os botões para o final */
 }
 
 /* Garante que ambos os botões ocupem 50% do espaço, ficando lado a lado */
 .espaco-botao .form-button-submit {
     flex: 1; 
-    width: 100%; /* Para garantir que o Flexbox funcione bem */
+    width: 100%;
 }
 
 
