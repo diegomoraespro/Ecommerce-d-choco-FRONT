@@ -2982,7 +2982,20 @@ input, select, textarea {
 	.form-button-submit {
 		width: 100%;
 		text-align: center;
-		padding: 12px;
+		padding: 10px 8px;
+		font-size: 0.7em;
+		letter-spacing: 1px;
+	}
+	
+	.espaco-botao {
+		gap: 8px;
+		flex-wrap: nowrap;
+	}
+	
+	.espaco-botao .form-button-submit {
+		flex: 1;
+		min-width: 0;
+		padding: 10px 5px;
 	}
 }
 
