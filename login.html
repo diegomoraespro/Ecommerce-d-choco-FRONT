@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/slider.css" />
+		
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -33,16 +35,33 @@
 
 						<!-- Logo -->
 						<div class="display-grid">
-							<div class="video-area">
-							<video autoplay loop playsinline controls>
-								<source src="videos/WhatsApp-Video-2025-12-07-at-13.54.01.mp4" type="video/mp4">
-							</video>
+							<!-- Carrossel à esquerda -->
+							<div class="video-area-1">
+								<div class="slider-container">
+													
+													<!-- Slide 1 - Imagem -->
+													<div class="slide">
+														<a href="#" class="image featured"><img src="images/dichoco.png" alt="Pavê de Limão" /></a>
+													</div> 
+
+													<!-- Slide 2 - Vídeo -->
+													<div class="slide">
+														<video controls>
+															<source src="videos/WhatsApp-Video-2025-12-07-at-13.54.01.mp4" type="video/mp4">
+														</video>
+													</div> 
+													
+													<!-- Botões de navegação -->
+													<button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+													<button class="next" onclick="mudarSlide(1)">&#10095;</button>
+													
+												</div>
+							</div> 
 							
-							<div class="overlay"></div> 
-							</div>
+							<!-- Formulário de login à direita -->
 							<div class="login-container display-flex">    
 								<h1><a href="#" class="logo-d-choco"><img src="images/logo-d-choco.png" alt="" /></a></h1>
-							<p>quem prova, nunca esquece.</p>
+								<p>quem prova, nunca esquece.</p>
 								<div class="col-6 col-12-small display-flex">
 									<p>Login</p>
 									<input name="email" placeholder="Seu email aqui" type="text" />
@@ -53,14 +72,11 @@
 								<div class="row gtr-50">
 									<div class="col-12 display-flex">
 										<a href="#" class="form-button-submit button icon solid">Login</a>
-									
-									
-									
-									<p>Não tem uma conta? <a href="cadastro.html" class="link-texto">Cadastrar-se</a></p>
-									<a href="esqueci-senha.html" class="link-texto">Esqueci minha senha</a>
+										
+										<p>Não tem uma conta? <a href="cadastro.html" class="link-texto">Cadastrar-se</a></p>
+										<a href="esqueci-senha.html" class="link-texto">Esqueci minha senha</a>
+									</div>
 								</div>
-								</div>
-
 							</div>
 						</div>
 
@@ -160,26 +176,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
-			<script>
-				// Pausa o vídeo em telas pequenas
-				function controlarVideo() {
-					var video = document.querySelector('.video-area video');
-					if (video) {
-						if (window.innerWidth <= 736) {
-							video.pause();
-							video.muted = true;
-						} else {
-							video.muted = false;
-							video.play();
-						}
-					}
-				}
-				
-				// Executa ao carregar e ao redimensionar
-				window.addEventListener('DOMContentLoaded', controlarVideo);
-				window.addEventListener('resize', controlarVideo);
-			</script>
+			<script src="assets/js/slider.js"></script>
 
 	</body>
 </html>

@@ -2866,42 +2866,43 @@ input, select, textarea {
 
 .display-grid {
     display: grid;
-    grid-template-columns: 70%  30% 50% 20%; 
-    
-    
-    
-    /* Centraliza o formulário verticalmente (opcional, mas fica bonito) */
-    align-items: center; 
+    grid-template-columns: 55% 45%; /* Duas colunas: carrossel 55%, formulário 45% */
+    gap: 30px; /* Espaço entre as colunas */
+    align-items: center; /* Alinha verticalmente no centro */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Carrossel à esquerda */
+.display-grid .video-area-1 {
+    grid-column: 1; /* Primeira coluna */
+    width: 100%;
 }
 
 .display-grid .logo-d-choco-pave img{
-	grid-column: 1 / 2; /* Logo na primeira coluna (esquerda) */
-	text-align: left; /* Centraliza a logo dentro da coluna */
+	text-align: left;
 	width: 86%;
 	padding-left: 0px;
 	margin-left: 0px;
-
 }
 
 .display-grid .video-area video{
     width: 100%;
-    padding-right: 70px; /* Um respiro interno */
-    
 }
 
-
-/* O formulário vai automaticamente para a segunda coluna se houver algo antes,
-   mas para garantir que ele fique na direita mesmo sendo o único item: */
-.login-container{
-    grid-column: 2 / 5; /* Força ele a ficar na coluna 2 (direita) */
-    padding: 40px; /* Um respiro interno */
-    
+/* Formulário à direita */
+.login-container {
+    grid-column: 2; /* Segunda coluna */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.login-container h1{
-    
-    margin-top:  200px; /* Um respiro interno */
-    
+.login-container h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 
