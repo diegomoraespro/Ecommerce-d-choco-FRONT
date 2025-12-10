@@ -1862,8 +1862,8 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	.box.excerpt .date {
-		background: #878787;
+	.box .excerpt .date {
+		background: #1D4A3E;
 		color: #fff;
 		font-weight: 400;
 		text-transform: uppercase;
