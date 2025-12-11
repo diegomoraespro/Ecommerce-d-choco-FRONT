@@ -1,0 +1,44 @@
+{
+  "name": "D'Choco - Chocolates Artesanais",
+  "short_name": "D'Choco",
+  "description": "Loja online de chocolates artesanais de qualidade. Quem prova, nunca esquece!",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/assets/images/logo-d-choco.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/logo-d-choco.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/logo-d-choco.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["shopping"],
+  "screenshots": [
+    {
+      "src": "/assets/images/logo-d-choco.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo-d-choco.png",
+      "sizes": "1080x1440",
+      "type": "image/png"
+    }
+  ]
+}
