@@ -11,6 +11,14 @@ class PWAManager {
     this.setupInstallPrompt();
     this.setupOfflineDetection();
     this.setupNotifications();
+    
+    // Fallback: Mostrar prompt manual se o beforeinstallprompt não dispara
+    setTimeout(() => {
+      if (!this.deferredPrompt) {
+        console.log('⚠️ beforeinstallprompt não disparou, mostrando fallback');
+        this.showInstallPrompt();
+      }
+    }, 3000);
   }
 
   // Registrar Service Worker
@@ -43,6 +51,7 @@ class PWAManager {
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       this.deferredPrompt = e;
+      console.log('✓ beforeinstallprompt event disparado');
       this.showInstallPrompt();
     });
 
@@ -51,6 +60,9 @@ class PWAManager {
       this.deferredPrompt = null;
       this.showSuccessMessage();
     });
+
+    // Log para debug
+    console.log('PWA: Event listeners configurados');
   }
 
   // Mostrar prompt de instalação
@@ -61,45 +73,55 @@ class PWAManager {
       return;
     }
 
-    const container = document.createElement('div');
-    container.className = 'pwa-install-prompt show';
-    container.innerHTML = `
-      <div class="pwa-install-content">
-        <div class="pwa-install-icon">
-          <i class="fas fa-mobile-alt"></i>
+    // Aguardar um pouco antes de mostrar (melhor UX)
+    setTimeout(() => {
+      const container = document.createElement('div');
+      container.className = 'pwa-install-prompt show';
+      container.innerHTML = `
+        <div class="pwa-install-content">
+          <div class="pwa-install-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="pwa-install-text">
+            <h3>Instale D'Choco no seu celular</h3>
+            <p>Acesse mais rápido e sem publicidade. Como um app nativo!</p>
+          </div>
+          <div class="pwa-install-buttons">
+            <button class="pwa-install-btn dismiss" id="pwa-dismiss">Não</button>
+            <button class="pwa-install-btn install" id="pwa-install">Instalar</button>
+          </div>
         </div>
-        <div class="pwa-install-text">
-          <h3>Instale D'Choco no seu celular</h3>
-          <p>Acesse mais rápido e sem publicidade. Como um app nativo!</p>
-        </div>
-        <div class="pwa-install-buttons">
-          <button class="pwa-install-btn dismiss" id="pwa-dismiss">Não</button>
-          <button class="pwa-install-btn install" id="pwa-install">Instalar</button>
-        </div>
-      </div>
-    `;
+      `;
 
-    document.body.appendChild(container);
+      document.body.appendChild(container);
 
-    document.getElementById('pwa-install').addEventListener('click', () => {
-      this.installPWA();
-    });
+      document.getElementById('pwa-install').addEventListener('click', () => {
+        this.installPWA(container);
+      });
 
-    document.getElementById('pwa-dismiss').addEventListener('click', () => {
-      this.dismissPrompt(container);
-    });
+      document.getElementById('pwa-dismiss').addEventListener('click', () => {
+        this.dismissPrompt(container);
+      });
+
+      console.log('✓ Prompt de instalação mostrado');
+    }, 2000); // Aguardar 2 segundos
   }
 
-  // Instalar PWA
+  // Instalar PWA (pode ser chamado manualmente)
   installPWA() {
     if (this.deferredPrompt) {
       this.deferredPrompt.prompt();
       this.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('✓ Usuário aceitou instalar a PWA');
+        } else {
+          console.log('✗ Usuário recusou instalar a PWA');
         }
         this.deferredPrompt = null;
       });
+    } else {
+      console.warn('⚠️ deferredPrompt não está disponível');
+      alert('Instalar esta página como app:\n\n1. Chrome: Menu → "Instalar D\'Choco"\n2. Safari: Compartilhar → "Adicionar à Tela inicial"\n3. Firefox: Menu → "Instalar"');
     }
   }
 
