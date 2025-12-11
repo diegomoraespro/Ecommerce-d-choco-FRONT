@@ -38,12 +38,8 @@ const Cart = {
         if (item) {
             item.quantity += change;
             if (item.quantity <= 0) {
-                if (confirm('Deseja remover este item do carrinho?')) {
-                    this.remove(id);
-                    return;
-                } else {
-                    item.quantity = 1;
-                }
+                this.remove(id);
+                return;
             }
             this.save(cart);
             this.render();
