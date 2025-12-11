@@ -1,0 +1,419 @@
+/* ========================================= */
+/* 1. VARIÁVEIS DE CORES E ESTILOS GERAIS */
+/* ========================================= */
+
+:root {
+    --primary-color: #1D4A3E; /* Verde personalizado */
+    --accent-color: #1abc9c; /* Cor alternativa do seu tema original (para manter compatibilidade) */
+    --text-color: #555;
+    --border-color: #eee;
+    --light-bg: #f8f8f8; /* Fundo claro para o resumo */
+    --hover-bg: #f4f4f4;
+}
+
+/* Garante que o container principal tenha margem interna em mobile */
+#main .container {
+    padding: 0 1.5em; 
+}
+
+
+/* ========================================= */
+/* 2. LAYOUT RESPONSIVO (USANDO FLEXBOX) */
+/* ========================================= */
+
+/* O seu HTML usa o sistema de grid do template (col-8 e col-4), 
+   o que já garante a base da responsividade. Abaixo, ajustamos a estilização interna. */
+
+/* Override específico para o header do carrinho (remove linhas duplas e reduz espaço) */
+#header > .container {
+    padding: 4em 0 4em 0;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+/* Estilo do cabeçalho do carrinho (Seu Carrinho) */
+#main header h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+    font-size: 1.8em;
+    color: #333;
+}
+
+
+/* ========================================= */
+/* 3. ESTILO DA TABELA DE ITENS (Lado Esquerdo) */
+/* ========================================= */
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    font-size: 1em;
+}
+
+.cart-table th {
+    background: var(--light-bg);
+    color: var(--text-color);
+    text-align: left;
+    padding: 1em 0.75em;
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+}
+
+.cart-table td {
+    padding: 1em 0.75em;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.cart-item:last-child td {
+    border-bottom: none;
+}
+
+/* Detalhes do Produto */
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.product-image {
+    width: 60px; /* Tamanho da miniatura da imagem */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px; /* Cantos levemente arredondados */
+    border: 1px solid var(--border-color);
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.3;
+}
+
+.product-info h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.product-info h3 a:hover {
+    color: var(--primary-color);
+}
+
+/* Input de Quantidade */
+.quantity-input {
+    width: 60px;
+    padding: 0.5em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Ajusta para evitar o spinner feio do navegador */
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Subtotal */
+.subtotal {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Botão de Remover (Lixeira) */
+.remove-item {
+    background-color: #1D4A3E;
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    background-color: #e74c3c; /* Vermelho para a lixeira ao passar o mouse */
+    color: #fff;
+}
+
+
+/* ========================================= */
+/* 4. ESTILO DO RESUMO DO PEDIDO (Lado Direito) */
+/* ========================================= */
+
+.summary-box {
+    background: var(--light-bg);
+    padding: 1.5em;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.summary-box header h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #333;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.summary-content {
+    margin-bottom: 1.5em;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.summary-row hr {
+    margin: 1em 0;
+    border-color: var(--border-color);
+}
+
+.total-row {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #333;
+    padding-top: 1em;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Cupom de Desconto Form */
+.coupon-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.coupon-form .button {
+    height: auto;
+    line-height: 1;
+    padding: 0.6em 1em;
+}
+
+/* Botão de Checkout (O mais importante) */
+.checkout-button {
+    /* O seu HTML já tem a classe 'primary' e 'fit' */
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    margin-top: 1.5em;
+    transition: background-color 0.2s;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3 !important; /* Azul mais escuro no hover */
+}
+
+
+/* Botão Continuar Comprando */
+.cart-actions .button.alt {
+    background-color: #ccc !important;
+    color: #333 !important;
+}
+
+.cart-actions .button.alt:hover {
+    background-color: #bbb !important;
+}
+
+
+/* ========================================= */
+/* 5. MEDIA QUERIES (RESPONSIVIDADE PARA MOBILE) */
+/* ========================================= */
+
+/* Para telas menores que 736px (Celulares) */
+/* ========================================= */
+/* 5. MEDIA QUERIES (RESPONSIVIDADE AJUSTADA) */
+/* ========================================= */
+
+/* ------------------------------------------- */
+/* 5.1. REGRAS PARA TABLETS E TELAS MÉDIAS (até 980px) */
+/* Este é o breakpoint principal para transformar a tabela em cartões. */
+/* ------------------------------------------- */
+@media screen and (max-width: 980px) {
+    /* FORÇA O LAYOUT DE UMA COLUNA */
+    /* Garante que a lista de itens e o resumo ocupem a largura total */
+    .col-8.col-12-medium,
+    .col-4.col-12-medium {
+        width: 100% !important; 
+        margin-top: 0; 
+        padding-left: 0 !important; 
+        padding-right: 0 !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .col-4.col-12-medium {
+        margin-top: 2.5em; /* Empurra o resumo para baixo com um bom espaçamento */
+    }
+
+    /* OCULTAR O CABEÇALHO DA TABELA */
+    .cart-table thead {
+        display: none;
+    }
+
+    /* TRANSFORMANDO LINHAS EM BLOCOS (ITENS DO CARRINHO) */
+    .cart-table, 
+    .cart-table tbody, 
+    .cart-table tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+    .cart-table tr {
+        /* Estilo de Cartão para cada item */
+        border: 1px solid var(--border-color);
+        margin-bottom: 1.25em; /* Aumenta o espaçamento entre itens */
+        border-radius: 6px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* Sombra um pouco mais visível */
+        padding: 10px;
+    }
+
+    /* TRANSFORMANDO CÉLULAS EM BLOCOS COM LABEL */
+    .cart-table td {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.75em 0.5em;
+        border: none;
+        text-align: right; 
+    }
+    
+    /* Estilo e Conteúdo dos Labels */
+    .cart-table td::before {
+        content: attr(data-label); 
+        font-weight: 600;
+        text-align: left; 
+        color: #666;
+    }
+    
+    /* Regras especiais para a célula do Produto (mantém flex row) */
+    .cart-table td.product-info {
+        display: flex; 
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1em;
+        padding: 1em 0;
+        border-bottom: 1px dashed var(--border-color);
+    }
+    
+    .cart-table td.product-info::before {
+        content: none;
+    }
+    
+    /* Regras especiais para a célula de Ação/Remover */
+    .cart-table td[data-label="Ação:"] { 
+        justify-content: center;
+        padding-top: 1em;
+    }
+    
+    .cart-table td[data-label="Ação:"]::before {
+        content: none; 
+    }
+
+    /* Ajuste para mobile onde o alinhamento é à esquerda */
+    .quantity-wrapper {
+        justify-content: flex-end; /* Alinha à direita para ficar junto com o valor */
+        display: inline-flex; 
+    }
+}
+
+/* ------------------------------------------- */
+/* 5.2. REGRAS PARA CELULARES PEQUENOS (até 480px) */
+/* Ajustes finos para a tela de celular. */
+/* ------------------------------------------- */
+@media screen and (max-width: 480px) {
+    
+    /* Ajustes Finos para telas muito pequenas */
+    .cart-table td {
+        /* Diminui um pouco o padding para telas mais estreitas */
+        padding: 0.5em 0.2em; 
+        font-size: 0.95em;
+    }
+
+    /* Altera o layout do Cupom para que os inputs fiquem 100% de largura */
+    .coupon-form .row.gtr-50 {
+        display: block;
+    }
+    
+    .coupon-form .row > .col-8.col-12-small,
+    .coupon-form .row > .col-4.col-12-small {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-bottom: 0.75em !important; 
+    }
+}
+
+/* ========================================= */
+/* 6. CONTROLES DE QUANTIDADE (+/-) */
+/* ========================================= */
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza no desktop */
+    gap: 5px;
+}
+
+/* Ajuste para mobile onde o alinhamento é à esquerda */
+@media screen and (max-width: 736px) {
+    /* Removido regra conflitante */
+}
+
+.quantity-btn {
+    background: #1D4A3E;
+    border: 1px solid #1D4A3E;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+
+.quantity-btn:hover {
+    background: #14332b;
+    color: #fff;
+}
+
+.quantity-btn:active {
+    background: #ccc;
+}
+
+/* Ajuste no input para remover bordas laterais se quiser um estilo "unido" 
+   ou manter separado como está. Vamos manter separado por enquanto. */
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 0.25em;
+    height: 32px; /* Mesma altura dos botões */
+}    /* Garante que o botão de Continuar Comprando seja de largura total */
+    .cart-actions .button.alt {
+        width: 100%;
+        text-align: center;
+    }
+}

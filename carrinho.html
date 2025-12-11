@@ -6,13 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Login</title>
+		<title>Carrinho de Compras</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/slider.css" />
 		<link rel="stylesheet" href="assets/css/icone.css" />
-		
+		<link rel="stylesheet" href="assets/css/carrinho.css" />
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -24,77 +23,115 @@
 						<i class="icon solid fa-shopping-cart"></i>
 						<span class="carrinho-badge">0</span>
 					</a>
-					<div class="container-login">
-						
+					<div class="container">
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
 									<li><a class="icon solid" href="index.html"><span>Inicio</span></a></li>
-									<li><a class="icon solid" href="catalogo.html" ><span>Catalogo</span></a></li>
+									<li><a class="icon solid" href="catalogo.html"><span>Catalogo</span></a></li>
 									<li><a class="icon solid" href="contrate.html"><span>Contrate</span></a></li>
 									<li><a class="icon solid" href="login.html"><span>Login</span></a></li>
-									
 								</ul>
 							</nav>
-							<br/>
-
-
-						<!-- Logo -->
-						<div class="display-grid">
-							<!-- Carrossel à esquerda -->
-							<div class="video-area-1">
-								<div class="slider-container">
-													
-													<!-- Slide 1 - Imagem -->
-													<div class="slide">
-														<a href="#" class="image featured"><img src="images/dichoco.png" alt="Pavê de Limão" /></a>
-													</div> 
-
-													<!-- Slide 2 - Vídeo -->
-													<div class="slide">
-														<video controls>
-															<source src="videos/WhatsApp-Video-2025-12-07-at-13.54.01.mp4" type="video/mp4">
-														</video>
-													</div> 
-													
-													<!-- Botões de navegação -->
-													<button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-													<button class="next" onclick="mudarSlide(1)">&#10095;</button>
-													
-												</div>
-							</div> 
-							
-							<!-- Formulário de login à direita -->
-							<div class="login-container display-flex">    
-								<h1><a href="#" class="logo-d-choco"><img src="images/logo-d-choco.png" alt="" /></a></h1>
-								<p>quem prova, nunca esquece.</p>
-								<div class="col-6 col-12-small display-flex">
-									<p>Login</p>
-									<input name="email" placeholder="Seu email aqui" type="text" />
-									<p>senha</p>
-									<input name="password" placeholder="Sua senha aqui" type="password" />
-								</div>
-								<br>
-								<div class="row gtr-50">
-									<div class="col-12 display-flex">
-										<a href="#" class="form-button-submit button icon solid">Login</a>
-										
-										<p>Não tem uma conta? <a href="cadastro.html" class="link-texto">Cadastrar-se</a></p>
-										<a href="esqueci-senha.html" class="link-texto">Esqueci minha senha</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-
-						
-						
-						
 					</div>
 				</section>
 
-			
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12-medium">
+								<!-- Carrinho - Lista de Itens -->
+								<section>
+									<header>
+										
+										<h1 id="logo"><a href="index.html" class="logo-d-choco"><img src="images/logo-d-choco.png" alt="" /></a></h1>
+										<br>
+									
+										<h2>carrinho</h2>
+										
+									</header>
+									
+									<div class="table-wrapper">
+										<table class="cart-table">
+											<thead>
+												<tr>
+													<th>Produto</th>
+													<th>Preço</th>
+													<th>Quantidade</th>
+													<th>Subtotal</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody id="cart-items">
+												<!-- Itens serão carregados via JavaScript -->
+											</tbody>
+										</table>
+									</div>
+								</section>
+							</div>
+
+							<!-- Resumo do Pedido -->
+							<div class="col-12-medium">
+								<aside>
+									<section">
+										<header>
+											<h2>Resumo do Pedido</h2>
+										
+										<div class="order-summary">
+											<div class="summary-row">
+												<span>Subtotal:</span>
+												<span id="cart-subtotal">R$ 84,90</span>
+											</div>
+											
+											
+											
+											<div class="summary-row discount-row">
+												<span>Desconto:</span>
+												<span id="discount-amount">- R$ 0,00</span>
+											</div>
+											
+											<hr />
+											
+											<div class="summary-row total-row">
+												<strong>Total:</strong>
+												<strong id="cart-total">R$ 169,90</strong>
+											</div>
+										</div>
+
+										<!-- Cupom de Desconto -->
+										<form class="coupon-form">
+											<label for="coupon-code">Cupom de Desconto:</label>
+											<div class="row gtr-50">
+												<div class="espaco-botao">
+													<input type="text" id="coupon-code" placeholder="Digite o cupom" />
+												</div>
+												<div class="espaco-botao">
+													<button type="submit" class="button">Aplicar</button>
+												</div>
+											</div>
+										</form>
+										<br>
+										<div class="espaco-botao">
+										<!-- Botão de Checkout -->
+										<a href="#" class="form-button-submit button icon solid">Finalizar Compra</a>
+										<!-- Ações do Carrinho -->
+										<a href="catalogo.html" class="form-button-submit button icon solid">Continuar Comprando</a>
+										</div>
+
+									</section>
+								</aside>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Banner -->
+				<section id="banner">
+					<div class="container">
+						<p>feito de forma artesanal <strong>em cada detalhe</strong>.<br />
+						pensando em você.</p>
+					</div>
+				</section>
 			<!-- Footer -->
 				<section id="footer">
 					<div class="container">
@@ -183,6 +220,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/slider.js"></script>
+			<script src="assets/js/carrinho.js"></script>
 
 	</body>
 </html>
