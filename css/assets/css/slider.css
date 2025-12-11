@@ -1,0 +1,136 @@
+/* ===== SLIDER VIDEO AREA ===== */
+.video-area-1 {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    /* Define uma altura base para o carrossel */
+    height: 500px; 
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+/* Container dos slides */
+.video-area-1 > div {
+    position: relative;
+    width: 100%;
+    /* Garante 100% da altura do pai (.video-area-1) */
+    height: 100%; 
+}
+
+/* Cada slide (imagem ou vídeo) */
+.video-area-1 > div > div {
+    display: none;
+    width: 100%;
+    /* Garante 100% da altura do pai */
+    height: 100%; 
+}
+
+/* Mostra o primeiro slide por padrão */
+.video-area-1 > div > div:first-child {
+    display: block;
+}
+
+/* Slide ativo */
+.video-area-1 > div > div.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação de fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo da imagem */
+.video-area-1 .image.featured {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.video-area-1 .image.featured img {
+    width: 100%;
+    /* Define a altura como 100% e usa object-fit: cover para preencher */
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilo do vídeo */
+.video-area-1 video {
+    width: 100%;
+    /* Define a altura como 100% e usa object-fit: cover para preencher */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Botões de navegação */
+.video-area-1 button.prev,
+.video-area-1 button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.video-area-1 button.prev:hover,
+.video-area-1 button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-area-1 button.prev {
+    left: 10px;
+}
+
+.video-area-1 button.next {
+    right: 10px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets (até 980px) */
+@media screen and (max-width: 980px) {
+    /* Ajusta a altura para telas menores de tablet */
+    .video-area-1 {
+        height: 400px;
+        /* display: none removido para que o slider seja visível */
+    }
+}
+
+/* Celulares (até 736px) */
+@media screen and (max-width: 736px) {
+    /* Ajusta a altura para celular */
+    .video-area-1 {
+        height: 300px;
+        /* display: none removido */
+    }
+    
+    .video-area-1 video {
+        /* display: none removido para que o vídeo seja visível */
+        display: block;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajusta a altura para celular pequeno */
+    .video-area-1 {
+        height: 250px;
+        /* display: none removido */
+    }
+}
