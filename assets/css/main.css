@@ -88,7 +88,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url(images/body-2.jpg);
+		background-color: #a87a53;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -1943,8 +1943,19 @@ input, select, textarea {
 
 		#header > .container {
 			padding: 14em 0 7em 0;
-			border-bottom: solid 2px #e5e5e5;
-			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+			border-bottom: solid 1px #000;
+			position: relative;
+		}
+
+		#header > .container:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 6px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: #000;
 		}
 
 		#header h1 {
@@ -2246,7 +2257,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		border-top: solid 2px #e5e5e5;
-		background: #A5C3D2;
+		background: #d3d3d3;
 		padding: 6em 0 8em 0;
 	}
 
