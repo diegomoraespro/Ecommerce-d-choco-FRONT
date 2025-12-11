@@ -72,7 +72,8 @@
     }
     
     /* Adiciona espaço no final do body para compensar o menu fixo */
-    body {
-        padding-bottom: 55px;
+    #page-wrapper {
+        padding-bottom: 80px;
+        background: linear-gradient(to bottom, transparent, #000 100%);
     }
 }
