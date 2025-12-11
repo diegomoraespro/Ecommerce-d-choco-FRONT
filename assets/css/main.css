@@ -104,43 +104,16 @@ input, select, textarea {
 		body:after {
 			content: '';
 			position: fixed;
-			bottom: 0;
+			bottom: -80px;
 			left: 0;
 			width: 100%;
-			height: 70px;
+			height: 80px;
 			background-color: #000;
-			z-index: 9999;
+			z-index: 9998;
 			pointer-events: none;
 		}
 	}
 
-	@media screen and (max-width: 768px) {
-		body:after {
-			content: '';
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 70px;
-			background-color: #000;
-			z-index: 9999;
-			pointer-events: none;
-		}
-	}
-
-	@media screen and (max-width: 480px) {
-		body:after {
-			content: '';
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 70px;
-			background-color: #000;
-			z-index: 9999;
-			pointer-events: none;
-		}
-	}
 
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
