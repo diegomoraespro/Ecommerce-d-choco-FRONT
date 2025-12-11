@@ -19,7 +19,7 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
-	padding: 0;
+	padding-top: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -89,18 +89,17 @@ input, select, textarea {
 	}
 
 	
-	body {
-		background-color: #a87a53;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		
-		background-attachment: scroll;
-		min-height: 100vh;
-		position: relative;
-	}
-
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+	
+body {
+	background-color: #a87a53;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	background-attachment: scroll;
+	min-height: 100vh;
+	position: relative;
+}		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
