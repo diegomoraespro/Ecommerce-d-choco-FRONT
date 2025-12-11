@@ -82,7 +82,7 @@ class PWAManager {
     document.body.appendChild(container);
 
     document.getElementById('pwa-install').addEventListener('click', () => {
-      this.installPWA(container);
+      this.installPWA();
     });
 
     document.getElementById('pwa-dismiss').addEventListener('click', () => {
@@ -91,13 +91,12 @@ class PWAManager {
   }
 
   // Instalar PWA
-  installPWA(container) {
+  installPWA() {
     if (this.deferredPrompt) {
       this.deferredPrompt.prompt();
       this.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('✓ Usuário aceitou instalar a PWA');
-          container.remove();
         }
         this.deferredPrompt = null;
       });
