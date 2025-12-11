@@ -3,7 +3,7 @@
 /* ========================================= */
 
 /* Menu Desktop - Sempre visível em desktop */
-@media screen and (min-width: 981px) {
+@media screen and (min-width: 980px) {
     .desktop-bottom-nav {
         display: flex !important;
     }
