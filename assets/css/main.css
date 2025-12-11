@@ -35,6 +35,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	
 }
 
 ol, ul {
@@ -87,7 +88,13 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f0f0f0;
+		background-image: url(images/body-2.jpg);
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		
+		background-attachment: fixed;
+		min-height: 100vh;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1930,7 +1937,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		position: relative;
-		background: #fff;
+		background: transparent;
 		text-align: center;
 	}
 
@@ -2187,7 +2194,7 @@ input, select, textarea {
 	#main {
 		position: relative;
 		overflow: hidden;
-		background: #fff;
+		background: transparent;
 		padding: 6em 0;
 	}
 
@@ -2233,7 +2240,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		border-top: solid 2px #e5e5e5;
-		background: #f0f0f0;
+		background: #A5C3D2;
 		padding: 6em 0 8em 0;
 	}
 
