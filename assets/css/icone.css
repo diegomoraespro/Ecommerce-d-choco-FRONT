@@ -21,6 +21,8 @@ a.carrinho-flutuante {
     transition: all 0.3s ease !important;
     text-decoration: none !important;
     border: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
 }
 
 /* Ícone dentro do carrinho */
