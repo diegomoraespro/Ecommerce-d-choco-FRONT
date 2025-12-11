@@ -103,7 +103,7 @@ const Cart = {
         });
 
         // Update Summary
-        const shipping = 10.00; // Fixed for now
+        const shipping = subtotal > 0 ? 10.00 : 0.00; // Fixed for now, but only if cart has items
         const discount = 0.00;
         const total = subtotal + shipping - discount;
 
