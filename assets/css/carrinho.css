@@ -5,7 +5,7 @@
 :root {
     --primary-color: #1D4A3E; /* Verde personalizado */
     --accent-color: #1abc9c; /* Cor alternativa do seu tema original (para manter compatibilidade) */
-    --text-color: #555;
+    --text-color: #333;
     --border-color: #eee;
     --light-bg: #f8f8f8; /* Fundo claro para o resumo */
     --hover-bg: #f4f4f4;
@@ -156,10 +156,6 @@
     cursor: pointer;
 }
 
-.remove-item:hover {
-    background-color: #e74c3c; /* Vermelho para a lixeira ao passar o mouse */
-    color: #fff;
-}
 
 
 /* ========================================= */
@@ -196,16 +192,10 @@
 
 .summary-row hr {
     margin: 1em 0;
-    border-color: var(--border-color);
+    border-color: #000;
 }
 
-.total-row {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: #333;
-    padding-top: 1em;
-    border-top: 1px solid var(--border-color);
-}
+
 
 /* Cupom de Desconto Form */
 .coupon-form label {

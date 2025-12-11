@@ -27,6 +27,7 @@ section, summary, time, mark, audio, video {
 	
 	
 	
+	
 }
 
 article, aside, details, figcaption, figure,
@@ -159,14 +160,7 @@ input, select, textarea {
 			transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		}
 
-		a:hover {
-			color: #ed786a;
-			border-bottom-color: rgba(255, 255, 255, 0);
-		}
-
-			a:hover strong {
-				color: #ed786a;
-			}
+		
 
 	strong, b {
 		font-weight: 600;
@@ -191,7 +185,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 1px #000;
 	}
 
 	blockquote {
@@ -1832,17 +1826,13 @@ input, select, textarea {
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		button:hover,
-		.button:hover {
-			background: #fd887a;
-		}
+		
 
 		input[type="button"]:active,
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		button:active,
-		.button:active {
-			background: #ed786a;
-		}
+		
 
 		input[type="button"].alt,
 		input[type="submit"].alt,
@@ -2160,7 +2150,7 @@ input, select, textarea {
 		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
 		position: relative;
 		text-transform: uppercase;
-		background-image: url(/images/banner.jpg);
+		background-image: url(/assets/images/banner.jpg);
 		background-size: cover;
 		padding: 10em 0;
 	}
@@ -2190,7 +2180,7 @@ input, select, textarea {
 				width: 35px;
 				height: 141px;
 				margin-top: -70px;
-				background: url("images/bracket.svg");
+				background: url("../images/bracket.svg");
 				opacity: 0.15;
 			}
 
