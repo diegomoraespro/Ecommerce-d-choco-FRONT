@@ -1,5 +1,5 @@
 // Service Worker para D'Choco PWA
-const CACHE_NAME = 'dchoco-v1';
+const CACHE_NAME = 'dchoco-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
