@@ -391,7 +391,7 @@
     justify-content: center;
     padding: 0;
     color: #fff;
-    transition: background 0.2s, color 0.2s;
+    
 }
 
 .quantity-btn:hover {
@@ -416,4 +416,3 @@
         width: 100%;
         text-align: center;
     }
-}
