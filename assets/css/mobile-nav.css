@@ -2,9 +2,24 @@
 /* MENU DE NAVEGAÇÃO MÓVEL FIXO NO RODAPÉ */
 /* ========================================= */
 
+/* Menu Desktop - Sempre visível em desktop */
+@media screen and (min-width: 981px) {
+    .desktop-bottom-nav {
+        display: flex !important;
+    }
+    
+    .mobile-bottom-nav {
+        display: none !important;
+    }
+}
+
 /* Esconde o titleBar padrão em mobile */
 @media screen and (max-width: 980px) {
     #titleBar {
+        display: none !important;
+    }
+    
+    .desktop-bottom-nav {
         display: none !important;
     }
     
@@ -59,12 +74,5 @@
     /* Adiciona espaço no final do body para compensar o menu fixo */
     body {
         padding-bottom: 55px;
-    }
-}
-
-/* Esconde o menu em desktop */
-@media screen and (min-width: 981px) {
-    .mobile-bottom-nav {
-        display: none !important;
     }
 }
