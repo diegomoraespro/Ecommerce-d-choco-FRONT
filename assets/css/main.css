@@ -2047,8 +2047,7 @@ input, select, textarea {
 		color: #fff;
 	}
 
-	.desktop-bottom-nav ul li:hover a span,
-	.desktop-bottom-nav ul li.active a span {
+	.desktop-bottom-nav ul li:hover a span{
 		color: #fff;
 	}
 
