@@ -98,7 +98,7 @@ const Cart = {
         });
 
         // Update Summary
-        const shipping = subtotal > 0 ? 10.00 : 0.00; // Fixed for now, but only if cart has items
+        const shipping = 0.00;
         const discount = 0.00;
         const total = subtotal + shipping - discount;
 
