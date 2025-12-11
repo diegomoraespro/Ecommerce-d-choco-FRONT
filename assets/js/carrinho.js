@@ -22,7 +22,6 @@ const Cart = {
         }
 
         this.save(cart);
-        alert('Produto adicionado ao carrinho!');
     },
 
     remove: function(id) {
