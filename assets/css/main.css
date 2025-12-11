@@ -99,15 +99,6 @@ input, select, textarea {
 		position: relative;
 	}
 
-	/* Fundo preto para o menu fixo em mobile */
-	@media screen and (max-width: 980px) {
-		#page-wrapper {
-			padding-bottom: 80px;
-		}
-	}
-
-
-
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
