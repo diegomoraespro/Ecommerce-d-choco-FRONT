@@ -3,6 +3,7 @@ node_modules/
 package-lock.json
 yarn.lock
 scripts/
+assets/css/fontawesome-all.min.css
 
 # Environment
 .env
