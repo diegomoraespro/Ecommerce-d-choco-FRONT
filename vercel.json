@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm run optimize",
+  "outputDirectory": ".",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "routes": [
+    {
+      "src": "^/(?!assets|sw\\.js|manifest\\.json|favicon).*\\.html$",
+      "dest": "$0"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ]
+}

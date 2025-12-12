@@ -3,11 +3,60 @@
 # 🍫 **D'Choco — E-commerce Oficial**
 Loja virtual criada para apresentar e fortalecer a marca **D'Choco**, oferecendo uma experiência moderna e elegante na venda de doces artesanais.
 
-**HTML · CSS · JavaScript**
+**HTML · CSS · JavaScript · PWA**
 
 ---
 
 </div>
+
+## 🚀 **Instalação e Deployment**
+
+### Instalação Local
+
+```bash
+# Clonar o repositório
+git clone https://github.com/diegomoraespro/Ecommerce-d-choco-FRONT.git
+cd Ecommerce-d-choco-FRONT
+
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento (opcional - é um site estático)
+# Abrir index.html no navegador
+
+# Build otimizado
+npm run optimize
+```
+
+### Deploy na Vercel
+
+1. **Conectar repositório à Vercel**
+   - Acesse https://vercel.com/new
+   - Conecte sua conta GitHub
+   - Selecione este repositório
+
+2. **Configurações de Build**
+   - Build Command: `npm run optimize`
+   - Output Directory: `.` (raiz)
+   - Variáveis de Ambiente: Não necessárias
+
+3. **Deploy**
+   - Clique em "Deploy"
+   - A Vercel irá:
+     - Executar PurgeCSS para remover CSS não utilizado
+     - Minificar arquivos CSS
+     - Otimizar imagens
+     - Fazer build do site estático
+
+### Scripts NPM Disponíveis
+
+```bash
+npm run build              # Rodar PurgeCSS
+npm run purge-css         # Remover CSS não utilizado
+npm run minify-css        # Minificar CSS (local)
+npm run optimize-images   # Otimizar imagens (local)
+npm run optimize          # Executar todas as otimizações
+```
 
 ## 🎨 **Design e Licenciamento**
 
