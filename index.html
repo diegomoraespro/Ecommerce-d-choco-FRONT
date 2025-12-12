@@ -18,6 +18,7 @@
 		<link rel="icon" type="image/png" href="assets/images/app-d-choco.png?v=4" />
 		<link rel="apple-touch-icon" href="assets/images/app-d-choco.png?v=4" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/desktop-nav.css" />
 		<link rel="stylesheet" href="assets/css/icone.css" />
 		<link rel="stylesheet" href="assets/css/mobile-nav.css" />
 		<link rel="stylesheet" href="assets/css/pwa.css" />
@@ -35,11 +36,12 @@
 					
 					<div class="container">
 						<!-- Logo -->
-							<h1 id="logo"><a href="#"><img src="assets/images/logo-d-choco.png" alt="" /></a></h1>
+							<h1 id="logo"><a href="#" class="logo-d-choco"><img src="assets/images/logo-d-choco.png" alt="" /></a></h1>
 							<p><strong>quem prova, nunca esquece.</strong></p>
 
 					</div>
 				</section>
+				<hr id="linha-hr">
 
 			<!-- Main -->
 				<section id="main">
@@ -53,7 +55,7 @@
 
 									<!-- Post -->
 										<article class="box post">
-											<header>
+											<header id="header-sonho">
 												<h2>ideias vindas de um <strong>sonho</strong><br />
 												saiba um pouco como a d'choco nasceu</h2>
 											</header>
@@ -173,8 +175,7 @@
 							<h2>Sugestões para melhoria? <strong>mande aqui:</strong></h2>
 						</header>
 						<div class="row">
-							<div class="col-6 col-12-medium">
-								<section>
+							<div class="col-6 col-12-medium">								<section>
 									<form method="post" action="#">
 										<div class="row gtr-50">
 											<div class="col-6 col-12-small">
@@ -191,72 +192,51 @@
 											</div>
 										</div>
 									</form>
-								</section>
-							</div>
-							<div class="col-6 col-12-medium">
-								<section>
-									<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur
-									leo nibh, rutrum eu malesuada.</p>
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<ul class="icons">
-												<li class="fa-solid fa-home">
-													1234 Somewhere Road<br />
-													Nashville, TN 00000<br />
-													USA
-												</li>
-												<li class="fa-solid fa-phone">
-													(000) 000-0000
-												</li>
-												<li class="fa-solid fa-envelope">
-													<a href="#">info@untitled.tld</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-6 col-12-small">
-											<ul class="icons">
-												<li class="fa-brands fa-twitter">
-													<a href="#">@untitled</a>
-												</li>
-												<li class="fa-brands fa-instagram">
-													<a href="#">instagram.com/untitled</a>
-												</li>
-												<li class="fa-brands fa-dribbble">
-													<a href="#">dribbble.com/untitled</a>
-												</li>
-												<li class="fa-brands fa-facebook-f">
-													<a href="#">facebook.com/untitled</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-					</div>
-					<div id="copyright" class="container">
-						<ul class="links">
-							<li>&copy; 2025 D'Choco. Todos os Direitos Reservados.</li> 
 							
-							<li>Design Original do Template: <a href="http://html5up.net" target="_blank">HTML5 UP</a> (Licença CC BY 3.0)</li>
-						</ul>
-					</div>
-					<br>
-					<br>
-				</section>
+								</section>
+							</div>
+<div class="col-6 col-12-medium">
+	<footer id="main-footer">
+    <div class="container">
+        <section class="contact-info">
+            <p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada.</p>
+            
+            <div class="row">
+                <div class="col-6 col-12-small">
+                    <h3>Detalhes</h3>
+                    <ul class="details-list">
+                        <li><i class="fa-solid fa-home"></i> 1234 Somewhere Road<br>Nashville, TN 00000 USA</li>
+                        <li><i class="fa-solid fa-phone"></i> (000) 000-0000</li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@untitled.tld">info@untitled.tld</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-12-small">
+                    <h3>Siga-nos</h3>
+                    <ul class="details-list">
+                        <li><i class="fa-brands fa-twitter"></i> <a href="#">@untitled</a></li>
+                        <li><i class="fa-brands fa-instagram"></i> <a href="#">instagram.com/untitled</a></li>
+                        <li><i class="fa-brands fa-dribbble"></i> <a href="#">dribbble.com/untitled</a></li>
+                        <li><i class="fa-brands fa-facebook-f"></i> <a href="#">facebook.com/untitled</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+    </div>
+
 
 		</div>
 
 		</div>
 
-		<!-- Menu de Navegação Desktop (Rodapé) -->
-		<nav class="desktop-bottom-nav">
+				<!-- Menu de Navegação Desktop (Rodapé) -->
+		<nav class="desktop-top-nav">
 			<ul>
-				<li><a class="fa-solid" href="index.html"><span>Início</span></a></li>
-				<li><a class="fa-solid" href="catalogo.html"><span>Catálogo</span></a></li>
-				<li><a class="fa-solid" href="contrate.html"><span>Contrate</span></a></li>
-				<li class="active"><a class="fa-solid" href="login.html"><span>Login</span></a></li>
+				<li class="active"><a href="index.html"><i class="fa-solid fa-home"></i> <span>Início</span></a></li>
+				<li><a href="catalogo.html"><i class="fa-solid fa-store"></i> <span>Catálogo</span></a></li>
+				<li><a href="contrate.html"><i class="fa-solid fa-briefcase"></i> <span>Contrate</span></a></li>
+				<li><a href="login.html"><i class="fa-solid fa-user"></i> <span>Login</span></a></li>
 			</ul>
 		</nav>
 
@@ -291,4 +271,10 @@
 				<span>Login</span>
 			</a>
 		</nav>
+		<div id="copyright" class="container">
+            <ul class="links">
+                <li>&copy; 2025 D'Choco. Todos os Direitos Reservados.</li> 
+                <li>Design Original do Template: <a href="http://html5up.net" target="_blank">HTML5 UP</a> (Licença CC BY 3.0)</li>
+            </ul>
+        </div>
 </html>

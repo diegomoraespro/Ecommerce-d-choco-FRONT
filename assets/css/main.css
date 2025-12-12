@@ -763,70 +763,8 @@ input[type="submit"].alt:active {
 #nav {
   display: none;
 }
-.desktop-bottom-nav {
-  background-color: rgba(0, 0, 0, 0.85);
-  border-bottom: 2px solid #c9a04b;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  left: 0;
-  padding: 1.2em 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-}
-.desktop-bottom-nav ul {
-  align-items: center;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.desktop-bottom-nav ul li {
-  align-items: center;
-  display: flex;
-  margin: 0 1.5em;
-  padding: 0;
-}
-.desktop-bottom-nav ul li a {
-  align-items: center;
-  border: 0;
-  color: #c9a04b;
-  display: flex;
-  font-weight: 400;
-  outline: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.2s ease;
-}
-.desktop-bottom-nav ul li a:before {
-  align-items: center;
-  background: #878787;
-  border-radius: 50%;
-  color: #e4e4e4;
-  display: flex;
-  font-size: 0.9em;
-  height: 2.25em;
-  justify-content: center;
-  line-height: 1;
-  margin-right: 0.75em;
-  transition: all 0.2s ease;
-  width: 2.25em;
-}
-.desktop-bottom-nav ul li a span {
-  font-size: 1.1em;
-  letter-spacing: 2px;
-  line-height: 1;
-}
-.desktop-bottom-nav ul li.active a:before,
-.desktop-bottom-nav ul li:hover a:before {
-  background: #c9a04b;
-  color: #fff;
-}
-.desktop-bottom-nav ul li:hover a span {
-  color: #fff;
-}
+
+
 .dropotron {
   background: #fff;
   background: hsla(0, 0%, 100%, 0.965);
@@ -1305,10 +1243,7 @@ input[type="submit"].alt:active {
     padding-left: 0;
   }
 }
-#logo img {
-  height: auto;
-  width: 100%;
-}
+
 .slider-container {
   margin: auto;
   max-width: 100%;
@@ -1665,9 +1600,27 @@ input[type="submit"].alt:active {
   text-decoration: none;
   border-bottom: 1px dotted rgba(128, 128, 128, 0.5);
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .details-list li a:hover {
   color: #ed786a;
   border-bottom-color: transparent;
+}
+
+.row .button {
+  width: 100%;
+}
+
+.col-12 .button-1{
+  width: 40%;
+}
+
+
+#page-wrapper #header-divider{
+  color: #000;
+}
+#header-sonho h2{
+  text-align: justify;
 }

@@ -5,6 +5,23 @@
   .mobile-bottom-nav {
     display: none !important;
   }
+  .logo-d-choco img {
+    width: 40%;
+    padding: 0%;
+    margin: 0%;
+    bottom: 0%;
+    height: auto;}
+
+  #linha-hr{
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 2em auto;
+  background: transparent;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  
+}
 }
 @media screen and (max-width: 980px) {
   #titleBar,
@@ -53,6 +70,18 @@
     font-weight: 600;
     letter-spacing: 0.5px;
   }
+  .logo-d-choco img {
+    width: 50%;
+    padding-top: 50px;
+    height: auto;}
+    #linha-hr{
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 2em auto;
+  background: transparent;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 #header > .container {
   border-bottom: none !important;
@@ -72,10 +101,7 @@
     font-size: 0.85em !important;
     padding: 0.8em 0 !important;
   }
-  #logo img {
-    height: auto;
-    max-width: 150px;
-  }
+  
   .form-button-submit.button {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -83,6 +109,19 @@
   .row.gtr-50 {
     margin: -0.375em 0 -1em -0.375em;
   }
+  .logo-d-choco img {
+    width: 50%;
+    padding-top: 50px;
+    height: auto;}
+
+    #linha-hr{
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 2em auto;
+  background: transparent;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 @media screen and (max-width: 480px) {
   .cart-table {
@@ -96,9 +135,19 @@
     font-size: 0.75em !important;
     padding: 0.6em 0 !important;
   }
+  
   .logo-d-choco img {
-    height: auto;
-    padding-top: 56px;
-    width: 100%;
-  }
+    width: 50%;
+    padding-top: 44px;
+    height: auto;}
+
+    #linha-hr{
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 2em auto;
+  background: transparent;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
+}}}
