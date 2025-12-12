@@ -128,14 +128,27 @@ body {
         display: block; /* Remove o display:flex centralizado do body original */
     }
 
+    #page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
     /* 2. O Wrapper agora ocupa 100% da largura */
     .dashboard-wrapper {
         display: flex; /* Use Flex-Column em vez de Block para manter o 'gap' funcionando */
         flex-direction: column;
         gap: 16px; /* Espaço entre os cards */
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 12px; /* Um pequeno respiro interno */
+        margin: 0 !important;
+    }
+
+    .content-area {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     /* 3. Ajuste da Sidebar para Mobile (Vertical) */
@@ -159,6 +172,18 @@ body {
         height: auto; /* IMPORTANTE: Deixe o card crescer conforme o texto */
         border-radius: 12px; /* Mantém arredondado */
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        width: 100%;
+    }
+
+    h2.card-header {
+      width: 100%;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .grid-container {
+      width: 100%;
+      max-width: 100%;
     }
 
     /* 5. Ajuste das linhas de edição para celular */
@@ -265,14 +290,27 @@ body {
         display: block; /* Remove o display:flex centralizado do body original */
     }
 
+    #page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
     /* 2. O Wrapper agora ocupa 100% da largura */
     .dashboard-wrapper {
         display: flex; /* Use Flex-Column em vez de Block para manter o 'gap' funcionando */
         flex-direction: column;
         gap: 16px; /* Espaço entre os cards */
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 12px; /* Um pequeno respiro interno */
+        margin: 0 !important;
+    }
+
+    .content-area {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
 
     /* 3. Ajuste da Sidebar para Mobile (Vertical) */
@@ -296,6 +334,18 @@ body {
         height: auto; /* IMPORTANTE: Deixe o card crescer conforme o texto */
         border-radius: 12px; /* Mantém arredondado */
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        width: 100%; /* Garante que o card ocupe toda a largura disponível */
+    }
+
+    h2.card-header {
+      width: 100%;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .grid-container {
+      width: 100%;
+      max-width: 100%;
     }
 
     /* 5. Ajuste das linhas de edição para celular */
