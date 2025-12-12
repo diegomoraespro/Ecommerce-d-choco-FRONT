@@ -29,6 +29,10 @@
     display: none !important;
   }
 
+  /* Reduz tamanho do nome dos produtos no catálogo */
+  .texto-centralizado h3 {
+    font-size: 0.8em !important;
+  }
 
   .mobile-bottom-nav {
     align-items: center;
@@ -108,6 +112,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  
+  /* Reduz tamanho do nome dos produtos no catálogo */
+  .texto-centralizado h3 {
+    font-size: 0.75em !important;
+  }
+  
   .row.gtr-50 {
     margin: -0.375em 0 -1em -0.375em;
   }
@@ -128,7 +138,7 @@
       /* tela user Mobile */
 body {
         padding: 0; /* Remove o padding de 2rem do desktop */
-        background-color: #f3f4f6; /* Garante a cor de fundo */
+        /* background-color: #f3f4f6; Removido para manter a cor original */
         display: block; /* Remove o display:flex centralizado do body original */
     }
 
@@ -166,7 +176,7 @@ body {
     }
 
     /* 5. Ajuste das linhas de edição para celular */
-    .row {
+    .row.editable-row {
         flex-direction: column; /* Um item embaixo do outro */
         align-items: flex-start;
         gap: 8px;
@@ -216,6 +226,11 @@ body {
     .btn-edit.hidden {
         display: none;
     }
+
+    /* Catálogo Mobile - Máximo 2 colunas */
+    .row > .col-4 {
+        width: 50% !important;
+    }
 }
 @media screen and (max-width: 480px) {
   .cart-table {
@@ -229,7 +244,25 @@ body {
     font-size: 0.75em !important;
     padding: 0.6em 0 !important;
   }
-  
+  .controle-desconto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha tudo à esquerda */
+        max-width: 400px; /* Define um tamanho máximo para não esticar */
+        margin-right: auto; /* Empurra o bloco para a esquerda */
+    }
+
+    /* Reduz tamanho do nome dos produtos no catálogo */
+    .texto-centralizado h3 {
+        font-size: 0.7em !important;
+    }
+
+    /* Ajuste para os botões ficarem alinhados também */
+    .controle-desconto .row {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
   .logo-d-choco img {
     width: 50%;
     padding-top: 44px;
@@ -248,7 +281,6 @@ body {
     /* tela user Mobile */
 body {
         padding: 0; /* Remove o padding de 2rem do desktop */
-        background-color: #f3f4f6; /* Garante a cor de fundo */
         display: block; /* Remove o display:flex centralizado do body original */
     }
 
@@ -286,7 +318,7 @@ body {
     }
 
     /* 5. Ajuste das linhas de edição para celular */
-    .row {
+    .row.editable-row {
         flex-direction: column; /* Um item embaixo do outro */
         align-items: flex-start;
         gap: 8px;
@@ -335,6 +367,11 @@ body {
     /* Esconde o lápis quando os botões de ação aparecem */
     .btn-edit.hidden {
         display: none;
+    }
+
+    /* Catálogo Mobile - Máximo 2 colunas */
+    .row > .col-4 {
+        width: 50% !important;
     }
 }
 }
