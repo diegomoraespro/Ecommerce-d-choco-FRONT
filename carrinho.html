@@ -22,67 +22,7 @@
 		<link rel="stylesheet" href="assets/css/carrinho.css" />
 		<link rel="stylesheet" href="assets/css/mobile-nav.css" />
 		<link rel="stylesheet" href="assets/css/pwa.css" />
-		<style>
-			#header > .container {
-				border-bottom: none !important;
-			}
-			#header > .container:after {
-				display: none !important;
-			}
-			
-			/* Responsividade para Mobile */
-			@media screen and (max-width: 736px) {
-				/* Reduzir tamanho da tabela em mobile */
-				.cart-table {
-					font-size: 0.75em !important;
-				}
-				
-				.cart-table th,
-				.cart-table td {
-					padding: 0.5em 0.3em !important;
-				}
-				
-				/* Reduzir tamanho dos botões em mobile */
-				.form-button-submit.button {
-					padding: 0.8em 0 !important;
-					font-size: 0.85em !important;
-				}
-				
-				/* Logo menor em mobile */
-				#logo img {
-					max-width: 150px;
-					height: auto;
-				}
-				
-				/* Botões em mobile */
-				.form-button-submit.button {
-					overflow: hidden;
-					text-overflow: ellipsis;
-				}
-				
-				/* Espaçamento menor */
-				.row.gtr-50 {
-					margin: -0.375em 0 -1em -0.375em;
-				}
-			}
-			
-			@media screen and (max-width: 480px) {
-				/* Ainda mais compacto em telas muito pequenas */
-				.cart-table {
-					font-size: 0.65em !important;
-				}
-				
-				.cart-table th,
-				.cart-table td {
-					padding: 0.3em 0.2em !important;
-				}
-				
-				.form-button-submit.button {
-					padding: 0.6em 0 !important;
-					font-size: 0.75em !important;
-				}
-			}
-		</style>
+		
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -94,17 +34,6 @@
 						<i class="icon solid fa-shopping-cart"></i>
 						<span class="carrinho-badge">0</span>
 					</a>
-					<div class="container">
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a class="icon solid" href="index.html"><span>Inicio</span></a></li>
-									<li><a class="icon solid" href="catalogo.html"><span>Catalogo</span></a></li>
-									<li><a class="icon solid" href="contrate.html"><span>Contrate</span></a></li>
-									<li><a class="icon solid" href="login.html"><span>Login</span></a></li>
-								</ul>
-							</nav>
-					</div>
 				</section>
 
 			<!-- Main -->
@@ -116,9 +45,11 @@
 							<!-- Carrinho - Lista de Itens -->
 							<section>
 								<header>
+									
+									
 									<h1 id="logo"><a href="index.html" class="logo-d-choco"><img src="assets/images/logo-d-choco.png" alt="" /></a></h1>
 									<p style="text-transform: uppercase; font-weight: 400; color: #000; margin: 1em 0 2em 0; font-size: 0.85em; letter-spacing: 3px; text-align: left;"><strong>quem prova, nunca esquece.</strong></p>
-									<h2 style="text-align: center;">carrinho</h2>
+									<h2 style="text-align: center;"><strong>carrinho</strong></h2>
 								</header>
 								
 								<div class="table-wrapper">
@@ -142,17 +73,18 @@
 							<!-- Resumo do Pedido - Abaixo do Carrinho -->
 							<section class="box">
 								<header>
-									<h2>Resumo do Pedido</h2>
+									<h2><strong>Resumo do Pedido</strong></h2>
 								</header>
 								<div class="order-summary">
 									<div class="summary-row">
-										<span>Subtotal:</span>
+										<span><strong>Subtotal:</strong></span>
 										<span id="cart-subtotal">R$ 84,90</span>
 									</div>
 									<div class="summary-row discount-row">
-										<span>Desconto:</span>
-										<span id="discount-amount">- R$ 0,00</span>
+										<span><strong>Desconto:</strong></span>
+										<span id="discount-amount">R$ 0,00</span>
 									</div>
+									<hr />
 									<hr />
 									<div class="summary-row">
 										<strong>Total:</strong>
@@ -179,7 +111,7 @@
 										<a href="#" class="form-button-submit button icon solid" style="display: flex; align-items: center; justify-content: center; padding: 1.2em 0.5em; line-height: 1.3; min-height: 50px;">Finalizar Compra</a>
 									</div>
 									<div class="col-6 col-12-small">
-										<a href="catalogo.html" class="form-button-submit button icon solid" style="display: flex; align-items: center; justify-content: center; padding: 1.2em 0.5em; line-height: 1.3; min-height: 50px;">Continuar Comprando</a>
+										<a href="catalogo.html" class="form-button-submit button icon solid" style="display: flex; align-items: center; justify-content: center; padding: 1.2em 0.5em; line-height: 1.3; min-height: 50px;">voltar catálogo</a>
 									</div>
 								</div>
 							</section>
@@ -199,7 +131,7 @@
 				<section id="footer">
 					<div class="container">
 						<header>
-							<h2>Questions or comments? <strong>Get in touch:</strong></h2>
+							<h2>Sugestões para melhoria? <strong>mande aqui:</strong></h2>
 						</header>
 						<div class="row">
 							<div class="col-6 col-12-medium">
@@ -216,7 +148,7 @@
 												<textarea name="message" placeholder="Message"></textarea>
 											</div>
 											<div class="col-12">
-												<a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
+												<a href="#" class="form-button-submit button icon solid fa-envelope">enviar mensagem</a>
 											</div>
 										</div>
 									</form>
@@ -271,8 +203,10 @@
 							<li>Design Original do Template: <a href="http://html5up.net" target="_blank">HTML5 UP</a> (Licença CC BY 3.0)</li>
 						</ul>
 					</div>
+					<br>
+					<br>
 				</section>
-
+			</section>
 		</div>
 
 		<!-- Menu de Navegação Desktop (Rodapé) -->

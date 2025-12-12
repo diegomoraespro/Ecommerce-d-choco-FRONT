@@ -71,3 +71,70 @@
         letter-spacing: 0.5px;
     }
 }
+#header > .container {
+        border-bottom: none !important;
+    }
+    #header > .container:after {
+        display: none !important;
+    }
+
+    /* Responsividade para Mobile */
+    @media screen and (max-width: 736px) {
+        /* Reduzir tamanho da tabela em mobile */
+        .cart-table {
+            font-size: 0.75em !important;
+        }
+        
+        .cart-table th,
+        .cart-table td {
+            padding: 0.5em 0.3em !important;
+        }
+        
+        /* Reduzir tamanho dos botões em mobile */
+        .form-button-submit.button {
+            padding: 0.8em 0 !important;
+            font-size: 0.85em !important;
+        }
+        
+        /* Logo menor em mobile */
+        #logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        /* Botões em mobile */
+        .form-button-submit.button {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        /* Espaçamento menor */
+        .row.gtr-50 {
+            margin: -0.375em 0 -1em -0.375em;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        /* Ainda mais compacto em telas muito pequenas */
+        .cart-table {
+            font-size: 0.65em !important;
+        }
+        
+        .cart-table th,
+        .cart-table td {
+            padding: 0.3em 0.2em !important;
+        }
+        
+        .form-button-submit.button {
+            padding: 0.6em 0 !important;
+            font-size: 0.75em !important;
+        }
+
+        .logo-d-choco img {
+            padding-top: 56px;
+            width: 100%;
+            height: auto;
+        }
+
+        
+    }

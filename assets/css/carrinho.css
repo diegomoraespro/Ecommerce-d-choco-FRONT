@@ -193,7 +193,16 @@
 .summary-row hr {
     margin: 1em 0;
     border-color: #000;
+    
 }
+
+.summary-row span {
+    font-weight: 600;
+    border-color: #000;
+    
+}
+
+    
 
 
 

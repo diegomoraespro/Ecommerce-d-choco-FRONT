@@ -2804,10 +2804,10 @@ input, select, textarea {
 
 	
 
-	.logo-d-choco img {
-		width: 40%;
-  		height: 60%;
-	}
+	#logo img {
+            width: 100%;
+            height: auto;
+        }
 
 /* Container principal do slider */
 .slider-container {
@@ -2981,6 +2981,11 @@ input, select, textarea {
 		gap: 20px;
 	}
 	
+	/* Ocultar slider container em 980px ou menores */
+	.display-grid .slider-container {
+		display: none;
+	}
+	
 	.login-container {
 		grid-column: 1; /* Ocupa a coluna única */
 		padding: 30px 20px;
@@ -3010,6 +3015,11 @@ input, select, textarea {
 	.display-grid {
 		grid-template-columns: 1fr;
 		gap: 15px;
+	}
+	
+	/* Ocultar slider container em 736px ou menores */
+	.display-grid .slider-container {
+		display: none;
 	}
 	
 	.login-container {
@@ -3148,6 +3158,11 @@ input, select, textarea {
 	.container-login {
 		width: 100%;
 		padding: 10px;
+	}
+	
+	/* Ocultar slider container em 480px ou menores */
+	.display-grid .slider-container {
+		display: none;
 	}
 	
 	.login-container {
