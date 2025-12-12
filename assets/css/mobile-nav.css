@@ -29,10 +29,6 @@
     display: none !important;
   }
 
-  /* Reduz tamanho do nome dos produtos no catálogo */
-  .texto-centralizado h3 {
-    font-size: 0.8em !important;
-  }
 
   .mobile-bottom-nav {
     align-items: center;
@@ -112,12 +108,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
-  /* Reduz tamanho do nome dos produtos no catálogo */
-  .texto-centralizado h3 {
-    font-size: 0.75em !important;
-  }
-  
   .row.gtr-50 {
     margin: -0.375em 0 -1em -0.375em;
   }
@@ -250,11 +240,6 @@ body {
         align-items: flex-start; /* Alinha tudo à esquerda */
         max-width: 400px; /* Define um tamanho máximo para não esticar */
         margin-right: auto; /* Empurra o bloco para a esquerda */
-    }
-
-    /* Reduz tamanho do nome dos produtos no catálogo */
-    .texto-centralizado h3 {
-        font-size: 0.7em !important;
     }
 
     /* Ajuste para os botões ficarem alinhados também */
