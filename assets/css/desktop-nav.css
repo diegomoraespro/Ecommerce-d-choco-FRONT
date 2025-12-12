@@ -10,6 +10,7 @@
     z-index: 1000;
     padding: 0 2rem;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .desktop-top-nav ul {
@@ -20,15 +21,18 @@
     margin: 0;
     padding: 0;
     height: 70px; /* Fixed height for the navbar */
+    text-decoration: none;
 }
 
 .desktop-top-nav li {
     margin: 0 1.5rem;
     position: relative;
+    text-decoration: none;
 }
 
 .desktop-top-nav a {
     text-decoration: none;
+    border-bottom: none !important; /* Remove border from main.css */
     color: #ffffff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
@@ -46,6 +50,8 @@
 .desktop-top-nav a i {
     font-size: 1.1rem;
     transition: transform 0.3s ease;
+    text-decoration: none;
+    
 }
 
 /* Hover Effects */
@@ -53,31 +59,15 @@
     color: #c9a04b; /* Gold color for hover */
 }
 
-.desktop-top-nav a:hover i {
-    transform: translateY(-2px);
-}
 
 /* Active State */
 .desktop-top-nav li.active a {
     color: #c9a04b;
+    text-decoration: none;
+    border-bottom: none !important;
 }
 
-/* Animated Underline Effect */
-.desktop-top-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #c9a04b;
-    transition: width 0.3s ease;
-}
 
-.desktop-top-nav a:hover::after,
-.desktop-top-nav li.active a::after {
-    width: 100%;
-}
 
 /* Responsive adjustment - Hide on mobile if needed, 
    though usually handled by media queries in other files */
