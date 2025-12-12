@@ -90,7 +90,7 @@ const Cart = {
                 <td class="subtotal" data-label="Subtotal">${this.formatPrice(itemSubtotal)}</td>
                 <td>
                     <button class="button small remove-item" onclick="Cart.remove('${item.id}')" aria-label="Remover item">
-                        <i class="icon solid fa-trash"></i>
+                        <i></i> Excluir
                     </button>
                 </td>
             `;
