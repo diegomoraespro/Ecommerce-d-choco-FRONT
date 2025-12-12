@@ -5,10 +5,10 @@
   "main": "index.html",
   "scripts": {
     "build": "npm run purge-css",
-    "purge-css": "purgecss --css assets/css/main.css assets/css/icone.css assets/css/carrinho.css assets/css/mobile-nav.css assets/css/slider.css assets/css/pwa.css --content '*.html' 'assets/**/*.js' --output assets/css/",
-    "purge-css:full": "purgecss --css assets/css/*.css main.css --content '*.html' 'assets/**/*.js' --output assets/css/ && rm main.css",
-    "optimize": "npm run purge-css && npm run minify-css",
-    "minify-css": "for file in assets/css/*.css; do npx cssnano \"$file\" --output \"$file\"; done"
+    "purge-css": "purgecss --css assets/css/main.css assets/css/icone.css assets/css/carrinho.css assets/css/mobile-nav.css assets/css/slider.css assets/css/pwa.css --content '*.html' 'assets/**/*.js' --output assets/css/ --safelist '.fa-,^icon,^is-,^has-,^with-,mobile-bottom-nav,desktop-bottom-nav,active,show,hidden,pwa-install-prompt,pwa-install-content,pwa-install-buttons,offline-indicator,pwa-loading'",
+    "purge-css:full": "purgecss --css 'assets/css/*.css' --content '*.html' 'assets/**/*.js' --output assets/css/ --safelist '.fa-,^icon,^is-,^has-,^with-,mobile-bottom-nav,desktop-bottom-nav,active,show,hidden,pwa-install-prompt,pwa-install-content,pwa-install-buttons,offline-indicator,pwa-loading' && rm -f main.css fontawesome-all.min.css",
+    "minify-css": "node scripts/minify.js",
+    "optimize": "npm run purge-css && npm run minify-css"
   },
   "keywords": [
     "ecommerce",
@@ -19,7 +19,8 @@
   "author": "Diego Moraes",
   "license": "MIT",
   "devDependencies": {
-    "purgecss": "^7.0.2",
-    "cssnano": "^6.0.1"
+    "cssnano": "^6.1.2",
+    "postcss": "^8.5.6",
+    "purgecss": "^7.0.2"
   }
 }
