@@ -26,6 +26,6 @@
     "purgecss": "^7.0.2"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "@fortawesome/fontawesome-free": "^7.1.0"
   }
 }
