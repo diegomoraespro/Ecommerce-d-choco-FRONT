@@ -12,7 +12,7 @@ module.exports = {
     'assets/css/slider.css',
     'assets/css/pwa.css'
   ],
-  output: 'assets/css/',
+  output: 'assets/css/purged/',
   fontFace: true,
   keyframes: true,
   safelist: [
@@ -32,10 +32,5 @@ module.exports = {
     'pwa-install-buttons',
     'offline-indicator',
     'pwa-loading'
-  ],
-  blocklist: [
-    /^html/,
-    /^body/,
-    /^\.container/
   ]
 };
