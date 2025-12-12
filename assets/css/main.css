@@ -682,9 +682,6 @@ input[type="submit"].alt:active {
 .icon.solid:before {
   font-weight: 900;
 }
-.icon.brands:before {
-  font-family: Font Awesome\5 Brands;
-}
 #page-wrapper > section {
   margin-bottom: 0;
 }
