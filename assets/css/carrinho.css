@@ -117,7 +117,7 @@
   display: flex;
   font-size: 1em;
   justify-content: space-between;
-  padding: 0.5em 0;
+  padding: 0.5em 0; 
 }
 .summary-row hr {
   border-color: #000;

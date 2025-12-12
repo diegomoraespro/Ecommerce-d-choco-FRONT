@@ -40,7 +40,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     display: flex;
-    align-items: center;
+    align-items: center; 
     gap: 0.5rem; /* Space between icon and text */
     padding: 0.5rem 0;
     transition: color 0.3s ease;

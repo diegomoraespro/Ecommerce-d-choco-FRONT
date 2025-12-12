@@ -99,14 +99,38 @@ html {
 :before {
   box-sizing: inherit;
 }
+
+:root {
+    --bg-body: #f3f4f6;
+    --bg-card: #ffffff;
+    --primary: #2563eb;       /* Azul mais vibrante */
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --success: #10b981;
+    --radius: 12px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
 body {
   background-attachment: scroll;
-  background-color: #a87a53;
+  
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   position: relative;
+  font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
 }
 body.is-preload *,
 body.is-preload :after,
@@ -418,9 +442,7 @@ section > :last-child {
   -ms-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
 }
-.image:hover {
-  opacity: 0.9;
-}
+
 .image img,
 .image.featured {
   display: block;
@@ -636,7 +658,7 @@ input[type="submit"] {
   border: 0;
   border-radius: 4px;
   box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
-  color: #fff !important;
+  color: #fff;
   display: inline-block;
   font-size: 1em;
   font-size: 0.85em;
@@ -662,35 +684,10 @@ input[type="submit"].icon:before {
   position: relative;
   top: 0.05em;
 }
-.button.alt,
-button.alt,
-button:active,
-button:hover,
-input[type="button"].alt,
-input[type="button"]:active,
-input[type="button"]:hover,
-input[type="reset"].alt,
-input[type="reset"]:active,
-input[type="reset"]:hover,
-input[type="submit"].alt,
-input[type="submit"]:active,
-input[type="submit"]:hover {
-  background: #878787;
-}
-.button.alt:hover,
-button.alt:hover,
-input[type="button"].alt:hover,
-input[type="reset"].alt:hover,
-input[type="submit"].alt:hover {
-  background: #979797;
-}
-.button.alt:active,
-button.alt:active,
-input[type="button"].alt:active,
-input[type="reset"].alt:active,
-input[type="submit"].alt:active {
-  background: #878787;
-}
+
+
+
+
 .no-sidebar .box.post > header {
   text-align: center;
 }
@@ -795,22 +792,7 @@ input[type="submit"].alt:active {
   border-top: 0;
   padding-top: 0;
 }
-.dropotron li:hover > a,
-.dropotron li:hover > span {
-  color: #ed786a;
-  -moz-transition:
-    color 0.25s ease-in-out,
-    border-bottom-color 0.25s ease-in-out;
-  -webkit-transition:
-    color 0.25s ease-in-out,
-    border-bottom-color 0.25s ease-in-out;
-  -ms-transition:
-    color 0.25s ease-in-out,
-    border-bottom-color 0.25s ease-in-out;
-  transition:
-    color 0.25s ease-in-out,
-    border-bottom-color 0.25s ease-in-out;
-}
+
 #features {
   background: #fff;
   overflow: hidden;
@@ -1284,10 +1266,7 @@ input[type="submit"].alt:active {
 .next {
   right: 10px;
 }
-.next:hover,
-.prev:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+
 @keyframes fade {
   0% {
     opacity: 0.4;
@@ -1604,10 +1583,7 @@ input[type="submit"].alt:active {
   overflow-wrap: anywhere;
 }
 
-.details-list li a:hover {
-  color: #ed786a;
-  border-bottom-color: transparent;
-}
+
 
 .row .button {
   width: 100%;
@@ -1620,7 +1596,434 @@ input[type="submit"].alt:active {
 
 #page-wrapper #header-divider{
   color: #000;
-}
+} 
 #header-sonho h2{
   text-align: justify;
 }
+
+
+/* --- Layout Principal (Grid) --- */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Desktop: Sidebar + Conteúdo */
+@media (min-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 300px 1fr; /* Sidebar fixa 300px + resto livre */
+        align-items: start;
+    }
+}
+
+/* --- Estilos Comuns de Card --- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    height: 100%; /* Para cards no grid terem mesma altura */
+}
+
+/* --- SIDEBAR (Foto de Perfil) --- */
+.sidebar {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 2rem; /* Fica fixo ao rolar no desktop */
+}
+
+.avatar-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+#profile-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efeito Overlay na Foto */
+.avatar-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.avatar-overlay svg { width: 24px; margin-bottom: 4px; }
+
+
+.summary-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.summary-role { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; background: #eff6ff; color: var(--primary); padding: 4px 12px; border-radius: 20px; display: inline-block; font-weight: 500; }
+.summary-meta { display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem; width: 100%; }
+
+/* --- ÁREA DE CONTEÚDO --- */
+.content-header { margin-bottom: 1.5rem; }
+.content-header h1 { font-size: 1.8rem; font-weight: 700; }
+.content-header p { color: var(--text-muted); }
+
+/* Grid interno dos cards de conteúdo */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* No desktop, alguns cards ficam lado a lado */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* 2 colunas */
+    }
+    /* O primeiro card (dados pessoais) ocupa largura total */
+    .grid-container section:first-child {
+        grid-column: span 2;
+    }
+}
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    background: #f9fafb;
+}
+
+/* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
+.row {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+.row:last-child { border: none; }
+
+.content { flex: 1; margin-right: 1rem; }
+.label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+.value-group { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1rem; }
+.verified-icon, .verified-badge-small { width: 18px; height: 18px; color: var(--success); }
+
+/* Input field styles */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+
+
+.hidden { display: none !important; }
+
+/* --- Layout Principal (Grid) --- */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Desktop: Sidebar + Conteúdo */
+@media (min-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 300px 1fr; /* Sidebar fixa 300px + resto livre */
+        align-items: start;
+    }
+}
+
+/* --- Estilos Comuns de Card --- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    height: 100%; /* Para cards no grid terem mesma altura */
+}
+
+/* --- SIDEBAR (Foto de Perfil) --- */
+.sidebar {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 2rem; /* Fica fixo ao rolar no desktop */
+}
+
+.avatar-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+#profile-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efeito Overlay na Foto */
+.avatar-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.avatar-overlay svg { width: 24px; margin-bottom: 4px; }
+
+
+.summary-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.summary-role { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; background: #eff6ff; color: var(--primary); padding: 4px 12px; border-radius: 20px; display: inline-block; font-weight: 500; }
+.summary-meta { display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem; width: 100%; }
+
+/* --- ÁREA DE CONTEÚDO --- */
+.content-header { margin-bottom: 1.5rem; }
+.content-header h1 { font-size: 1.8rem; font-weight: 700; }
+.content-header p { color: var(--text-muted); }
+
+/* Grid interno dos cards de conteúdo */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* No desktop, alguns cards ficam lado a lado */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* 2 colunas */
+    }
+    /* O primeiro card (dados pessoais) ocupa largura total */
+    .grid-container section:first-child {
+        grid-column: span 2;
+    }
+}
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    background: #f9fafb;
+}
+
+/* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
+.row {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+.row:last-/* --- Layout Principal (Grid) --- */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Desktop: Sidebar + Conteúdo */
+@media (min-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 300px 1fr; /* Sidebar fixa 300px + resto livre */
+        align-items: start;
+    }
+}
+
+/* --- Estilos Comuns de Card --- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    height: 100%; /* Para cards no grid terem mesma altura */
+}
+
+/* --- SIDEBAR (Foto de Perfil) --- */
+.sidebar {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 2rem; /* Fica fixo ao rolar no desktop */
+}
+
+.avatar-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+#profile-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efeito Overlay na Foto */
+.avatar-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.avatar-overlay svg { width: 24px; margin-bottom: 4px; }
+
+
+.summary-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.summary-role { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; background: #eff6ff; color: var(--primary); padding: 4px 12px; border-radius: 20px; display: inline-block; font-weight: 500; }
+.summary-meta { display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem; width: 100%; }
+
+/* --- ÁREA DE CONTEÚDO --- */
+.content-header { margin-bottom: 1.5rem; }
+.content-header h1 { font-size: 1.8rem; font-weight: 700; }
+.content-header p { color: var(--text-muted); }
+
+/* Grid interno dos cards de conteúdo */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* No desktop, alguns cards ficam lado a lado */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* 2 colunas */
+    }
+    /* O primeiro card (dados pessoais) ocupa largura total */
+    .grid-container section:first-child {
+        grid-column: span 2;
+    }
+}
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    background: #f9fafb;
+}
+
+/* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
+.row {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+.row:last-child { border: none; }
+
+.content { flex: 1; margin-right: 1rem; }
+.label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+.value-group { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1rem; }
+.verified-icon, .verified-badge-small { width: 18px; height: 18px; color: var(--success); }
+
+/* Input field styles */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+
+
+.hidden { display: none !important; }
+
+child { border: none; }
+
+.content { flex: 1; margin-right: 1rem; }
+.label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+.value-group { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1rem; }
+.verified-icon, .verified-badge-small { width: 18px; height: 18px; color: var(--success); }
+
+/* Input field styles */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+
+
+.hidden { display: none !important; }
+
+ 
+
