@@ -504,6 +504,41 @@ ul.icons > li:before {
   top: 2.6em;
   width: 2em;
 }
+
+/* Fix for Font Awesome 6 on list items */
+ul.icons > li {
+  font-family: "Source Sans Pro", sans-serif;
+}
+ul.icons > li.fa-solid:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+ul.icons > li.fa-brands:before {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+/* Fix for Font Awesome 6 on buttons */
+.button.fa-solid, .button.fa-brands {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.button.fa-solid:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.5;
+  padding-right: 0.75em;
+  position: relative;
+  top: 0.05em;
+}
+.button.fa-brands:before {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  opacity: 0.5;
+  padding-right: 0.75em;
+  position: relative;
+  top: 0.05em;
+}
+
 ul.icons > li:first-child {
   padding-top: 0;
 }
@@ -1601,4 +1636,38 @@ input[type="submit"].alt:active {
     letter-spacing: 1px;
     padding: 10px 8px;
   }
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.25em;
+  line-height: 1.6;
+}
+
+.details-list li i {
+  min-width: 1.5em;
+  margin-right: 1em;
+  margin-top: 0.2em;
+  text-align: center;
+  color: #ed786a;
+  flex-shrink: 0;
+}
+
+.details-list li a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(128, 128, 128, 0.5);
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+}
+
+.details-list li a:hover {
+  color: #ed786a;
+  border-bottom-color: transparent;
 }
