@@ -77,14 +77,29 @@ html {
 }
 
 :root {
-    --bg-body: #f3f4f6;
-    --bg-card: #ffffff;
-    --primary: #2563eb;       /* Azul mais vibrante */
-    --text-main: #1f2937;
-    --text-muted: #6b7280;
-    --border: #e5e7eb;
-    --success: #10b981;
-    --radius: 12px;
+    /* --- Identidade D'Choco --- */
+    --primary-color: #1d4a3e; /* Verde escuro */
+    --primary-alt: #2563eb;   /* Azul (caso precise de destaque, senão pode remover) */
+    
+    /* Fundos */
+    --bg-body: #a87a53;       /* Marrom da marca */
+    --bg-card: #ffffff;       /* Fundo branco para leitura */
+    
+    /* Textos */
+    --text-main: #1a1a1a;     /* Preto suave */
+    --text-muted: #6b7280;    /* Cinza para textos secundários */
+    
+    /* Bordas e Status */
+    /* Dica: separei a cor da borda da espessura para facilitar o uso */
+    --border-color: #1d4a3e;
+    --border-style: 2px solid var(--border-color); 
+    --success: #10b981;       /* Verde sucesso */
+
+    /* Estrutura e Efeitos */
+    --radius: 8px;            /* 8px combina mais com o estilo "Strongly Typed" */
+    --sidebar-width: 280px;
+    
+    /* Sombras (Mantive as do segundo bloco que são mais modernas) */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -1331,19 +1346,23 @@ input[type="submit"].icon:before {
     
   }
   .espaco-botao {
-    gap: 2px;
+    gap: 4px;
   }
   .espaco-botao .form-button-submit {
     font-size: 0.2em;
     letter-spacing: 0.1px;
     
-    
-      
-
-    min-width: 55px;           /* Ocupa a largura total disponível */
+    min-width: 102px;           /* Ocupa a largura total disponível */
     
   }
-  
+  .espaco-botao .form-button-submit-catalogo {
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.1px;
+    height: auto;
+    width: 40%;           /* Ocupa a largura total disponível */
+    padding: 3%;
+  }
 }
 
 .details-list {
@@ -1413,7 +1432,7 @@ input[type="submit"].icon:before {
     background: var(--bg-card);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border-color);
     overflow: hidden;
     height: 100%; /* Para cards no grid terem mesma altura */
 }
@@ -1432,6 +1451,7 @@ input[type="submit"].icon:before {
     align-items: center;
     position: sticky;
     top: 2rem; /* Fica fixo ao rolar no desktop */
+    border: var(--border-style) !important;
 }
 
 .avatar-container {
@@ -1440,7 +1460,7 @@ input[type="submit"].icon:before {
     border-radius: 50%;
     position: relative;
     margin-bottom: 1.5rem;
-    border: 4px solid white;
+    border: 1px solid white;
     box-shadow: var(--shadow-md);
     overflow: hidden;
 }
@@ -1555,7 +1575,7 @@ input[type="submit"].icon:before {
     border-radius: 50%;
     position: relative;
     margin-bottom: 1.5rem;
-    border: 4px solid white;
+    border: 1px solid white;
     box-shadow: var(--shadow-md);
     overflow: hidden;
 }
@@ -1649,7 +1669,7 @@ input[type="submit"].icon:before {
     border-radius: 50%;
     position: relative;
     margin-bottom: 1.5rem;
-    border: 4px solid white;
+    border: 1px solid white;
     box-shadow: var(--shadow-md);
     overflow: hidden;
 }
@@ -1738,18 +1758,7 @@ input[type="submit"].icon:before {
 /* =========================================
    1. Variáveis e Reset Básico
    ========================================= */
-:root {
-    --primary-color: #1d4a3e;
-    --bg-body: #a87a53; /* Cinza bem claro, padrão dashboard */
-    --bg-card: #ffffff;
-    --text-main: #1a1a1a;
-    --text-muted: #6b7280;
-    --border-color: #e5e7eb;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --radius: 8px;
-    --sidebar-width: 280px;
-}
+
 
 * {
     box-sizing: border-box;
@@ -1791,7 +1800,7 @@ body {
 .sidebar {
     background: var(--bg-card);
     border-radius: var(--radius);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     box-shadow: var(--shadow-sm);
     padding: 2rem;
     text-align: center;
@@ -1817,8 +1826,8 @@ body {
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #fff;
-    box-shadow: 0 0 0 1px var(--border-color);
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 1px;
 }
 
 .avatar-container img {
