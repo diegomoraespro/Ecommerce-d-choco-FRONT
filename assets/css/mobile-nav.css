@@ -543,7 +543,7 @@ body {
     }
 
     #page-wrapper {
-        width: 100% !important;
+        width: 150% !important;
         max-width: 100% !important;
         padding: 0 !important;
     }
@@ -665,4 +665,7 @@ body {
     width: 170% !important;
     padding-left: 15px;
   }
+ /* Em assets/css/carrinho.css */
+
+
 }
