@@ -7,18 +7,138 @@
     padding: 0%;
     margin: 0%;
     bottom: 0%;
-    height: auto;}
+    height: auto;
+  }
+#header .logo-flutuante img {
+    display: block !important;
+    height: auto !important;
+    object-fit: contain !important;
+    width: 150% !important;
+    padding-top: 40px;
+    padding-left: 15px;
+  }
+  #linha-hr {
+    width: 80%;
+    border: 0;
+    border-top: 2px solid #000;
+    margin: 2em auto;
+    background: transparent;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
 
-  #linha-hr{
-  width: 80%;
-  border: 0;
-  border-top: 2px solid #000;
-  margin: 2em auto;
-  background: transparent;
-  margin-top: 0%;
-  margin-bottom: 0%;
-  
-}
+  /* tela user Desktop */
+  body {
+    padding: 0;
+    display: block;
+  }
+
+  #page-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 92% !important;
+    max-width: 100% !important;
+    padding-left: 1%;
+    margin-left: 25px !important;
+    padding-top: 60px;
+  }
+
+  .content-area {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .avatar-container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+
+  h2.card-header {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .grid-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .row.editable-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+
+  .value-group {
+    width: 100%;
+  }
+
+  .view-text {
+    word-break: break-word;
+  }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -30px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn-save, .btn-cancel {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .btn-edit.hidden {
+    display: none;
+  }
+
+  .row > .col-4 {
+    width: 50% !important;
+  }
 }
 @media screen and (max-width: 980px) {
   #titleBar {
@@ -87,6 +207,127 @@
 #header > .container:after {
   display: none !important;
 }
+
+  /* tela user Mobile */
+  body {
+    padding: 0;
+    display: block;
+  }
+
+  #page-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 92% !important;
+    max-width: 100% !important;
+    padding-left: 1%;
+    margin-left: 25px !important;
+    padding-top: 30px;
+  }
+
+  .content-area {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .avatar-container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+
+  h2.card-header {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .grid-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .row.editable-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+
+  .value-group {
+    width: 100%;
+  }
+
+  .view-text {
+    word-break: break-word;
+  }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -30px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn-save, .btn-cancel {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .btn-edit.hidden {
+    display: none;
+  }
+
+  .row > .col-4 {
+    width: 50% !important;
+  }
+  #header .logo-flutuante img {
+    display: block !important;
+    height: auto !important;
+    object-fit: contain !important;
+    width: 170% !important;
+    padding-left: 15px;
+  }
+}
 @media screen and (max-width: 736px) {
   .cart-table {
     font-size: 0.75em !important;
@@ -138,11 +379,12 @@ body {
     .dashboard-wrapper {
         display: flex; /* Use Flex-Column em vez de Block para manter o 'gap' funcionando */
         flex-direction: column;
-        gap: 16px; /* Espaço entre os cards */
-        width: 100% !important;
+        gap: 8px; /* Espaço entre os cards */
+        width: 92% !important;
         max-width: 100% !important;
-        padding: 12px; /* Um pequeno respiro interno */
-        margin: 0 !important;
+        padding-left: 1%; /* Um pequeno respiro interno */
+        margin-left: 25px !important;
+        padding-top: 30px;
     }
 
     .content-area {
@@ -242,6 +484,13 @@ body {
     .row > .col-4 {
         width: 50% !important;
     }
+    #header .logo-flutuante img {
+    display: block !important;
+    height: auto !important;
+    object-fit: contain !important;
+    width: 170% !important;
+    padding-left: 15px;
+  }
 }
 @media screen and (max-width: 480px) {
   .cart-table {
@@ -303,11 +552,13 @@ body {
     .dashboard-wrapper {
         display: flex; /* Use Flex-Column em vez de Block para manter o 'gap' funcionando */
         flex-direction: column;
-        gap: 16px; /* Espaço entre os cards */
-        width: 100% !important;
+        gap: 8px; /* Espaço entre os cards */
+        width:92% !important;
         max-width: 100% !important;
-        padding: 12px; /* Um pequeno respiro interno */
-        margin: 0 !important;
+        padding-left: 1%; /* Um pequeno respiro interno */
+        margin-left: 25px !important;
+        padding-top: 30px;
+        
     }
 
     .content-area {
@@ -407,5 +658,11 @@ body {
     .row > .col-4 {
         width: 50% !important;
     }
-}
+   #header .logo-flutuante img {
+    display: block !important;
+    height: auto !important;
+    object-fit: contain !important;
+    width: 170% !important;
+    padding-left: 15px;
+  }
 }
