@@ -268,7 +268,10 @@ body {
         justify-content: flex-start;
         width: 100%;
     }
-    
+  
+    .card h1 {
+      font-size: 0.1em;
+    }
   .logo-d-choco img {
     width: 50%;
     padding-top: 44px;

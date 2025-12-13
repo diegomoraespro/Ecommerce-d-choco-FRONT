@@ -671,9 +671,9 @@ input[type="submit"].icon:before {
   width: 100%;
 }
 #header h1 {
-  color: #ed786a;
+  
   font-family: Arvo;
-  font-size: 3em;
+  font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 13px;
   text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
@@ -1418,6 +1418,11 @@ input[type="submit"].icon:before {
     height: 100%; /* Para cards no grid terem mesma altura */
 }
 
+.dashboard-wrapper .card h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 /* --- SIDEBAR (Foto de Perfil) --- */
 .sidebar {
     padding: 2rem;
@@ -1474,7 +1479,7 @@ input[type="submit"].icon:before {
     font-size: 1rem;
     font-weight: 600;
     border-bottom: 1px solid var(--border);
-    background: #f9fafb;
+    
 }
 
 /* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
@@ -1589,7 +1594,7 @@ input[type="submit"].icon:before {
     font-size: 1rem;
     font-weight: 600;
     border-bottom: 1px solid var(--border);
-    background: #f9fafb;
+    
 }
 
 /* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
@@ -1683,7 +1688,7 @@ input[type="submit"].icon:before {
     font-size: 1rem;
     font-weight: 600;
     border-bottom: 1px solid var(--border);
-    background: #f9fafb;
+    
 }
 
 /* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
@@ -1798,6 +1803,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    
 }
 
 
@@ -1871,8 +1877,9 @@ body {
 }
 
 .card-header {
-    background-color: #f9fafb;
-    border-bottom: 1px solid var(--border-color);
+    background-color: #1D4A3E;
+    border-bottom: 1px solid;
+    
     padding: 1rem 1.5rem;
     margin: 0;
     font-size: 1rem;
@@ -2015,6 +2022,7 @@ body {
     .dashboard-wrapper {
         grid-template-columns: 1fr; /* Uma coluna só */
         gap: 1.5rem;
+        
     }
 
     .sidebar {
@@ -2025,6 +2033,7 @@ body {
         padding: 1rem;
         position: relative; /* Remove sticky no mobile */
         top: 0;
+        background-color: #fff;
     }
 
     .profile-photo-wrapper .avatar-container img {
@@ -2033,6 +2042,11 @@ body {
         height: 64px;
         margin-right: 50px;
         
+    }
+
+    .sidebar h1 {
+        font-size: 1.25rem;
+        margin: 0;
     }
     
     .sidebar .editable-row {
