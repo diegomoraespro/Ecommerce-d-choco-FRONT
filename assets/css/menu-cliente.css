@@ -1,0 +1,79 @@
+/* Garante que o container do menu permita posicionamento relativo */
+.menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* O Menu Flutuante (Escondido por padrão) */
+.menu-popup {
+  display: none; /* Começa invisível */
+  position: absolute;
+  bottom: 70px; /* Joga o menu para cima da barra (ajuste conforme a altura da sua nav) */
+  right: 10px;  /* Alinha um pouco à direita */
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+  width: 200px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+/* Quando tiver a classe 'active', ele aparece */
+.menu-popup.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Estilo da lista dentro do menu */
+.menu-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-popup li {
+  margin-bottom: 5px;
+}
+
+.menu-popup a, 
+.menu-popup button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.menu-popup a:hover, 
+.menu-popup button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilo específico para o botão Sair */
+.btn-logout {
+  color: #d9534f; /* Cor vermelha para indicar ação de sair */
+  font-weight: bold;
+}
+
+.separator {
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+
+/* Pequena animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
